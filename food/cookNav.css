@@ -1,0 +1,25 @@
+/* cook cookNavBar */
+.cookNavBar {
+    overflow: hidden;
+    background-color: black;
+}
+
+.cookNavBar a {
+    display: block;
+    float: left;
+    font-size: 16px;
+    color: aliceblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.cookNavBar a:hover {
+    background-color: green;
+    color: aliceblue;
+}
+
+.cookNavBar a.active {
+    background-color: darkgreen;
+    color: aliceblue;
+}
