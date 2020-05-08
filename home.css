@@ -4,11 +4,15 @@ header {
     background-color: rgb(0, 29, 73);
 }
 
+/* section */
+section {
+    padding: 10px;
+}
+
 /* flexbox */
 .flexbox {
     display: flex;
     flex-wrap: nowrap;
-
 }
 
 .leftBox {
