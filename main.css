@@ -6,12 +6,9 @@ html {
 body {
     margin: 0 auto;
     font-family: 'Courier New', Courier, monospace;
-    background-color: rgb(12, 20, 69);
+    background-color: rgb(0, 24, 44);
     color: aliceblue;
     max-width: 1360px;
-    background: radial-gradient(ellipse at bottom, #00233a 0%, #000000 100%);
-    background-size: cover;
-    height: 100%;
 }
 
 /* nav bar stuff */

@@ -1,56 +1,73 @@
 // Seasoning mixes
 var mix = [
-    { name: 'Provence Herb Mix', style: ['earthly'], ingredients: ['rosemary', 'basil', 'thyme', 'parsley', 'fennel', 'marjoram', 'tarragon', 'savory', 'oregano'], usage1: ['potatoes', 'onions', 'zucchini', 'eggplant', 'tomatoes'], usage2: ['chicken', 'beef', 'lamb', 'fish'], usage3: ['soups', 'salad dressings', 'dry rubs', 'mariandes'] },
-    { name: 'Italian Herb Mix', style: ['basil'], ingredients: [''], usage1: [''], usage2: [''], usage3: [''] },
-    { name: 'Curry Powder', style: ['warm', 'spicy'], ingredients: ['turmeric', 'coriander', 'cumin', 'fenugreek', 'red pepper'], usage1: ['cauliflower', 'cabbage', 'zucchini', 'broccoli', 'green beans'], usage2: ['chicken', 'lentils', 'pork', 'tofu'], usage3: ['curries', 'rice', 'soups', 'sauces', 'stir-fries', 'marinades'] },
-    { name: '', style: [''], ingredients: [''], usage1: [''], usage2: [''], usage3: [''] },
-    { name: 'Ras el Hanout', style: ['spicy', 'sweet'], ingredients: ['cardamom', 'cumin', 'cloves', 'nutmeg', 'cinnamon', 'peppercorn', 'paprika', 'turmeric', 'coriander', 'ginger'], usage1: ['onions', 'tomatoes', 'dates', 'prunes', 'carrots'], usage2: ['chicken', 'beef', 'lamb', 'fish', 'beans', 'lentils'], usage3: ['soups', 'dry rubs', 'marinades'] },
-    { name: '', style: [''], ingredients: [''], usage1: [''], usage2: [''], usage3: [''] },
-    { name: '', style: [''], ingredients: [''], usage1: [''], usage2: [''], usage3: [''] },
-    { name: '', style: [''], ingredients: [''], usage1: [''], usage2: [''], usage3: [''] },
-    { name: '', style: [''], ingredients: [''], usage1: [''], usage2: [''], usage3: [''] }
+    {
+        name: 'Provence Herb Mix',
+        ingredients: ['Rosemary', 'Basil', 'Thyme', 'Parsley', 'Fennel', 'Marjoram', 'Tarragon', 'Savory', 'Oregano']
+    },
+    {
+        name: 'Italian Herb Mix',
+        ingredients: ['Basil']
+    },
+    {
+        name: 'Curry Powder',
+        ingredients: ['Turmeric', 'Coriander', 'Cumin', 'Fenugreek', 'Red pepper']
+    },
+    {
+        name: 'Ras el Hanout',
+        ingredients: ['Cardamom', 'Cumin', 'Cloves', 'Nutmeg', 'Cinnamon', 'Pepper', 'Paprika', 'Turmeric', 'Coriander', 'Ginger']
+    },
 ];
 
 // Herbs and spices
 var cooking = [
     {
         name: 'Basil',
-        description: '',
+        description: 'some green herb',
         form: ['fresh', 'ground'],
-        flavour: ['f1', ''],
-        usage: ['g45', '', ''],
-        spice_mix: ['f34']
+        flavour: ['f1', '']
     },
     {
         name: 'Rosemary',
-        description: '',
+        description: 'another green herb',
         form: ['fresh', 'ground'],
-        flavour: ['f1', ''],
-        usage: ['5h6', '', ''],
-        spice_mix: ['3g4']
+        flavour: ['f1', '']
     },
     {
         name: 'Chili',
-        description: '',
+        description: 'spicy herb',
         form: ['fresh', 'ground'],
-        flavour: ['f', ''],
-        usage: ['g53', '', ''],
-        spice_mix: ['5g6']
+        flavour: ['f', '']
     },
     {
         name: 'Parsley',
-        description: '',
+        description: 'parsley...',
         form: ['fresh', 'ground'],
-        flavour: ['2f', ''],
-        usage: ['54t', '35', ''],
-        spice_mix: ['3f']
+        flavour: ['2f', '']
     },
     {
         name: 'Dill',
-        description: '',
+        description: 'dill...',
         form: ['fresh', 'ground'],
-        flavour: ['f2', ''],
-        usage: ['3f', '', ''],
-        spice_mix: ['3f']
+        flavour: ['f2', '']
     }
+];
+
+// Usage
+var use = [
+    {
+        name: 'stuff',
+        usage: ['Basil', 'Chili']
+    },
+    {
+        name: 'stuff2',
+        usage: ['Basil']
+    },
+    {
+        name: 'stuff3',
+        usage: ['Dill']
+    },
+    {
+        name: 'stuff4',
+        usage: ['Parsley']
+    },
 ];

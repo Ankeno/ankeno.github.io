@@ -16,7 +16,7 @@ a {
 /* herb tiles */
 .herbContainer {
     margin: 0;
-    border: 5px dashed yellow;
+    border: 0px dashed yellow;
     display: grid;
     row-gap: 5px;
     column-gap: 5px;
@@ -24,17 +24,49 @@ a {
     grid-auto-rows: minmax(200px, auto);
 }
 
-.herbTile {
-    border: 3px solid yellowgreen;
+.herbContainer div {
+    /*border: 3px solid yellowgreen;*/
     margin: 0;
     padding: 10px;
     min-width: 300px;
-    background-color: green;
+    background-color: rgb(136, 39, 1);
 }
 
+.herbContainer div:nth-child(odd) {
+    background-color: rgb(64, 75, 0);
+}
+
+/*
 .herbItem {
     color: aliceblue;
     margin: 5px 0px 5px 0px;
     padding: 0px;
+}*/
+
+.nested {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    /*grid-template-columns: repeat(3, 1fr);*/
+    grid-auto-rows: 50px;
+    gap: 1em;
 }
 
+.herbContainer .nested .hname {
+    background-color: green;
+}
+
+.herbContainer .nested .hdesc {
+    background-color: midnightblue;
+}
+.herbContainer .nested .hform {
+    background-color: darkgreen;
+}
+.herbContainer .nested .hflav {
+    background-color: brown;
+}
+.herbContainer .nested .hblend {
+    background-color: darkmagenta;
+}
+.herbContainer .nested .husage {
+    background-color: olive;
+}

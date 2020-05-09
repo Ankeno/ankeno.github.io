@@ -4,26 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herbs & Spices</title>
+    <!--css-->
     <link rel="stylesheet" type="text/css" href="../main.css">
     <link rel="stylesheet" type="text/css" href="cookNav.css">
     <link rel="stylesheet" type="text/css" href="herbs.css">
-    <script src="../main.js"></script>
+    <!--scripts-->
+    <script src="../main.js" defer></script>
+    <script src="fooddb.js" defer></script>
+    <script src="herbs.js" defer></script>
 </head>
-<body>
-    <!--navBar-->
+<body onload="clock()">
+    <!--navbar-->
     <div class="navBar" id="navBar">
-        <div class="logo">Riverwood</div>
+        <div class="logo" id="logo">Ankeno</div>
         <a href="../index.html">Home</a>
-        <a href="#link1">Link1</a>
-        <a href="#link2">Link2</a>
+        <a href="#">Link1</a>
+        <a href="#">Link2</a>
         <a href="herbs.html" class="active">Cooking</a>
-        <a class="last" href="#link5">Last</a>
+        <a class="last" href="#">Last</a>
+        <div class="clock" id="clock"></div>
         <div class="icon" id="icon" onclick="nav(); navBtn()">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
     </div>
+
     <!--cook navBar-->
     <div class="cookNavBar" id="cookNavBar">
         <a href="herbs.html" class="active">Herbs and Spices</a>
@@ -32,6 +38,7 @@
         <a href="#">Cooking</a>
         <a href="#">CookBot</a>
     </div>
+
     <!--header-->
     <div class="header">
         <h1>Spice Emporium</h1>
@@ -50,20 +57,19 @@
     <h2>Items list</h2>
 
 
-    <div class="herbContainer" id="herbContainer"></div>
+    <div class="herbContainer" id="herbContainer">
+        <div class="nested">
+            <div class="hname">Name: </div>
+            <div class="hdesc">Description: </div>
+            <div class="hform">Form: </div>
+            <div class="hflav">Flavour: </div>
+            <div class="hblend">Blend: </div>
+            <div class="husage">Usage: </div>
+        </div>
+    </div>
 
     
-
-
-    <!--image buttons-->
-    <p>
-        <img src="btn1.jpg">
-        <img src="btn2.jpg">
-        <img src="btn3.jpg">
-        <img src="btn4.jpg">   
-    </p>
-
-
+   
     <p>Info box</p>
     <p id="infoBox"></p>
     
@@ -72,8 +78,7 @@
         <h2>Edge of the lake</h2>
     </div>
 
-    <!--scripts-->
-    <script src="fooddb.js"></script>
-    <script src="herbs.js"></script>
+
+
 </body>
 </html>
