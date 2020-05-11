@@ -15,10 +15,11 @@ let tileGen = function () {
         //seasoning
         let slist = [];
 
-        for (let h of seasoning) {
+        for (let h of herbs) {
             for (let u of h.usage) {
                 if (u === i) {
                     slist.push(h.name);
+                    console.log(i);
                 };
             };
         };
