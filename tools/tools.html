@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ankeno</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="home.css">
-    <script src="main.js" defer></script>
+    <title>Tools</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="tools.css">
+    <script src="../main.js" defer></script>
+    <script src="tools.js" defer></script>
 </head>
 
 <body onload="clock()">
     <!--navbar-->
     <div class="navBar" id="navBar">
         <div class="logo" id="logo">Ankeno</div>
-        <a href="index.html" class="active">Home</a>
-        <a href="tools/tools.html">Tools</a>
+        <a href="index.html">Home</a>
+        <a href="tools/tools.html" class="active">Tools</a>
         <a href="#">Link1</a>
         <a href="#">Link2</a>
         <a href="food/herbs.html">Cooking</a>
@@ -32,7 +33,7 @@
     <!--header-->
     <header>
         <div>
-            <h1>Welcome to my website</h1>
+            <h1>Tools page</h1>
             <p>Some header text.
                 <br>
                 More header text.</p>
@@ -46,38 +47,33 @@
         <p><i>more text</i></p>
         <div class="grid">
             <div>
-                <p>text here</p>
-
-                <p><i>more text</i></p>
-                <p>text here</p>
-
-                <p><i>more text</i></p>
+                <p>Percentage calculator</p>
+                <p>Value: <input type="number" id="pcalcv" min="1" value="1"></p>
+                <p>Total: <input type="number" id="pcalct" min="1" value="1"></p>
+                <button id="pcalc" onclick="pcalc()">Calculate</button>
+                <p id="pcalcr">Result: </p>
             </div>
             <div>
-                <p>stuff 2 here</p>
-                <ul id="msg"></ul>
-                <input id="textInput" type="text">
-                <button id="sendBtn">Button</button>
+                <p>Tile 2 here</p>
+                <input>
+                <button>Button</button>
             </div>
             <div>
-                <p>text here</p>
-
-                <p><i>more text</i></p>
-                <p>text here</p>
-
-                <p><i>more text</i></p>
+                <p>Tile 3 here</p>
+                <input>
+                <button>Button</button>
             </div>
             <div>
-                <p>text here</p>
-
-                <p><i>more text</i></p>
-                <p>text here</p>
-
-                <p><i>more text</i></p>
+                <p>Tile 4 here</p>
+                <input>
+                <button>Button</button>
+            </div>
+            <div>
+                <p>Tile 5 here</p>
+                <input>
+                <button>Button</button>
             </div>
         </div>
-        <p>rock</p>
-        <p>tree</p>
     </section>
 
 

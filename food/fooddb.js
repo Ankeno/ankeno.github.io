@@ -104,42 +104,42 @@ var herbs = [
     {
         name: 'Coriander',
         alt_name: '',
-        usage: ['', '']
+        usage: ['Rice', 'Vegetables', 'Mushrooms', 'Poultry', 'Beef', 'Sauces', 'Fruit', 'Dessert']
     },
     {
         name: 'Cumin',
         alt_name: '',
-        usage: ['', '']
+        usage: ['Vegetables', 'Potatoes', 'Poultry', 'Beef', 'Pork', 'Lamb', 'Fish', 'Sauces']
     },
     {
         name: 'Curry',
         alt_name: '',
-        usage: ['', '']
+        usage: ['Rice', 'Potatoes', 'Mushrooms', 'Poultry', 'Cheese', 'Eggs']
     },
     {
         name: 'Dill',
         alt_name: '',
-        usage: ['', '']
+        usage: ['Rice', 'Vegetables', 'Potatoes', 'Mushrooms', 'Poultry', 'Beef', 'Lamb', 'Fish', 'Soups', 'Cheese', 'Eggs', 'Bread']
     },
     {
         name: 'Fennel',
         alt_name: '',
-        usage: ['', '']
+        usage: ['Vegetables', 'Poultry', 'Pork', 'Lamb', 'Fish', 'Bread', 'Fruit']
     },
     {
         name: 'Fenugreek',
         alt_name: '',
-        usage: ['', '']
+        usage: ['Mushrooms']
     },
     {
         name: 'Garlic',
         alt_name: '',
-        usage: ['', '']
+        usage: ['Rice', 'Vegetables', 'Potatoes', 'Poultry', 'Beef', 'Pork', 'Fish', 'Pasta', 'Soups', 'Sauces', 'Eggs', 'Bread']
     },
     {
         name: 'Ginger',
         alt_name: '',
-        usage: ['', '']
+        usage: ['Rice', 'Potatoes', 'Mushrooms', 'Poultry', 'Beef', 'Pork', 'Fish', 'Sauces', 'Eggs', 'Fruit', 'Dessert', 'Baked Goods']
     },
     {
         name: 'Mace',
@@ -199,32 +199,32 @@ var herbs = [
     {
         name: 'Saffron',
         alt_name: '',
-        usage: ['', '']
+        usage: ['Vegetables', 'Fish']
     },
     {
         name: 'Sage',
         alt_name: '',
-        usage: ['', '']
+        usage: ['Rice', 'Vegetables', 'Potatoes', 'Mushrooms', 'Poultry', 'Beef', 'Pork', 'Lamb', 'Fish', 'Soups', 'Sauces', 'Cheese', 'Bread', 'Fruit']
     },
     {
         name: 'Salt',
         alt_name: '',
-        usage: ['', '']
+        usage: ['Rice', 'Vegetables', 'Potatoes', 'Poultry', 'Beef', 'Pork', 'Lamb', 'Fish', 'Pasta', 'Soups', 'Sauces', 'Eggs', 'Bread', 'Baked Goods']
     },
     {
         name: 'Savory',
         alt_name: '',
-        usage: ['', '']
+        usage: ['Vegetables', 'Sauces']
     },
     {
         name: 'Sesame',
         alt_name: '',
-        usage: ['', '']
+        usage: ['Rice', 'Vegetables', 'Potatoes', 'Poultry', 'Fish', 'Eggs', 'Bread', 'Fruit', 'Baked Goods']
     },
     {
         name: 'Sugar',
         alt_name: '',
-        usage: ['', '']
+        usage: ['Sauces', 'Bread', 'Dessert', 'Baked Goods']
     },
     {
         name: 'Sumac',
@@ -234,21 +234,21 @@ var herbs = [
     {
         name: 'Tarragon',
         alt_name: '',
-        usage: ['', '']
+        usage: ['Rice', 'Vegetables', 'Potatoes', 'Mushrooms', 'Poulty', 'Beef', 'Lamb', 'Fish', 'Soups', 'Sauces', 'Cheese', 'Eggs']
     },
     {
         name: 'Thyme',
         alt_name: '',
-        usage: ['', '']
+        usage: ['Rice', 'Vegetables', 'Potatoes', 'Mushrooms', 'Poultry', 'Beef', 'Pork', 'Lamb', 'Fish', 'Soups', 'Sauces', 'Cheese', 'Eggs', 'Bread', 'Fruit']
     },
     {
         name: 'Turmeric',
         alt_name: '',
-        usage: ['', '']
+        usage: ['Rice', 'Potatoes', 'Mushrooms', 'Fish', 'Sauces', 'Eggs']
     },
     {
         name: 'Vanilla',
         alt_name: '',
-        usage: ['', '']
+        usage: ['Dessert', 'Baked Goods']
     }
 ];
