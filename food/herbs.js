@@ -19,7 +19,6 @@ let tileGen = function () {
             for (let u of h.usage) {
                 if (u === i) {
                     slist.push(h.name);
-                    console.log(i);
                 };
             };
         };
