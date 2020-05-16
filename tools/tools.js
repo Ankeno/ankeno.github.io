@@ -7,6 +7,7 @@ function pcalc() {
 
     let rn = Math.round(r * 10) / 10;
 
-    document.getElementById('pcalcr').innerHTML = 'Result: ' + rn + '%';
+    document.getElementById('pcalcr').innerHTML = `Result: ${rn}%`
+    //document.getElementById('pcalcr').innerHTML = 'Result: ' + rn + '%';
 
 };
