@@ -1,0 +1,41 @@
+html {
+    background-color: black;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(102, 51, 35);
+    color: aliceblue;
+    max-width: 700px;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.back {
+    color: aliceblue;
+    flex-grow: 2;
+}
+
+.title {
+    color: aliceblue;
+    flex-grow: 6;
+    margin: auto;
+}
+
+.clock {
+    flex-grow: 2;
+    font-size: 1.2em;
+    color: aliceblue;
+    text-align: center;
+    padding: 0 0.5em 0 0;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
