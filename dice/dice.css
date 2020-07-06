@@ -5,24 +5,39 @@ html {
 body {
     margin: 0 auto;
     font-family: 'Courier New', Courier, monospace;
-    background-color: rgb(102, 51, 35);
-    color: aliceblue;
-    max-width: 700px;
 }
 
-.head {
+.container {
+    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 700px;
+    max-height: 900px;
+    height: 100vh;
+    background-color: rgb(102, 51, 35);
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border: 3px solid white;
+}
+/* 1st row */
+.title {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    flex: 1;
 }
 
 .back {
     color: aliceblue;
     flex-grow: 2;
+    text-align: center;
 }
 
-.title {
+.titleLink {
     color: aliceblue;
+    font-size: 200%;
+    text-align: center;
     flex-grow: 6;
     margin: auto;
 }
@@ -38,4 +53,29 @@ body {
     margin-left: auto;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+/* 2nd row */
+.settings {
+    flex: 2;
+}
+
+/* 3rd row */
+.diceBoard {
+    flex: 4;
+}
+
+/* 4th row */
+.roll {
+    flex: 1;
+}
+
+/* 5th row */
+.stats {
+    flex: 1;
+}
+
+/* separator */
+.stats, .roll, .diceBoard, .settings {
+    border-top: 1px solid white;
 }
