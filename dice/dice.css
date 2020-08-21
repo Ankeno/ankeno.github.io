@@ -63,6 +63,22 @@ body {
 /* 3rd row - dice board*/
 .diceBoard {
     flex: 4;
+    display: grid;
+    align-content: space-evenly;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    margin: 0;
+}
+
+.dice {
+    align-content: center;
+    
+}
+
+.diceImg {
+    display: block;
+    max-height: 50%;
+    max-width: 50%;
 }
 
 /* 4th row - roll button*/
