@@ -14,3 +14,23 @@ function clockNum(c) {
     return c;
 }
 
+// dice roll
+function randomDice(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function diceRoll() {
+    let diceNumber = document.querySelector('input[name = "dice"]:checked').value;
+    let diceContainer = document.getElementById('diceBoard');
+
+    diceContainer.innerHTML = '';
+
+    for (i = 0; i < diceNumber; i++) {
+        let roll = randomDice(1,9);
+        let d = document.createElement('div');
+        d.setAttribute('class', 'dice');
+        d.innerHTML = `<img src="../images/dice${roll}.svg" class="diceImg">`;
+        diceContainer.appendChild(d);
+        d = 'sda ${roll} sda'
+    };
+}

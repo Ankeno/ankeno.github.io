@@ -17,10 +17,16 @@
         </div>
 
         <div class="settings">
-            <p>settings</p>
+            <p>Select the number of dices to use</p>
+            <div id="diceNumber">
+                <input type="radio" name="dice" value="1" checked="checked">1
+                <input type="radio" name="dice" value="2">2
+                <input type="radio" name="dice" value="3">3
+                <input type="radio" name="dice" value="4">4
+            </div>
         </div>
 
-        <div class="diceBoard">
+        <div class="diceBoard" id="diceBoard">
             <div class="dice">
                 <img src="../images/dice9.svg" class="diceImg">
             </div>
@@ -37,7 +43,7 @@
         </div>
 
         <div class="roll">
-            <button class="rollBtn">Roll</button>
+            <button class="rollBtn" onclick="diceRoll()">Roll</button>
         </div>
 
 
