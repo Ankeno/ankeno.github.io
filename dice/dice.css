@@ -64,23 +64,24 @@ body {
 .diceBoard {
     flex: 4;
     display: grid;
-    align-content: space-evenly;
     grid-template-columns: auto auto;
     justify-content: space-evenly;
-    margin: 0;
 }
 
 .dice {
-    align-content: center;
-    
+    height: 190px;
+    width: 190px;
+    background-color: whitesmoke;
+    border: 2px black solid;
+    border-radius: 7%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr 1fr;
 }
 
-.diceImg {
-    display: block;
-    max-height: 50%;
-    max-width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+.dot {
+    background-color: darkblue;
+    border-radius: 50%;
 }
 
 /* 4th row - roll button*/

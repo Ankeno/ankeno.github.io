@@ -29,8 +29,49 @@ function diceRoll() {
         let roll = randomDice(1,9);
         let d = document.createElement('div');
         d.setAttribute('class', 'dice');
-        d.innerHTML = `<img src="../images/dice${roll}.svg" class="diceImg">`;
+        d.innerHTML = '';
+
+        let dots = [];
+        switch (roll) {
+            case 1:
+                dots = [24];
+                break;
+            case 2:
+                dots = [12, 36];
+                break;
+            case 3:
+                dots = [12, 24, 36];
+                break;
+            case 4:
+                dots = [8, 12, 36, 40];
+                break;
+            case 5:
+                dots = [8, 12, 24, 36, 40];
+                break;
+            case 6:
+                dots = [8, 12, 22, 26, 36, 40];
+                break;
+            case 7:
+                dots = [8, 12, 22, 24, 26, 36, 40];
+                break;
+            case 8:
+                dots = [8, 10, 12, 22, 26, 36, 38, 40];
+                break;
+            case 9:
+                dots = [8, 10, 12, 22, 24, 26, 36, 38, 40];
+                break;
+        };
+
+
+        for (k = 0; k < 49; k++) {
+            let e = document.createElement('div');
+            e.innerHTML = '';
+            if (dots.indexOf(k) > -1) {
+                e.setAttribute('class', 'dot');
+            };
+            d.appendChild(e);
+        };
+
         diceContainer.appendChild(d);
-        d = 'sda ${roll} sda'
     };
 }
