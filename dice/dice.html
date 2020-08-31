@@ -19,26 +19,41 @@
         </div>
 
         <div class="settings">
-            <div class="innerSettings">
-                <p>Number of dices to roll</p>
-                <div id="diceNumber">
-                    <input type="radio" name="dice" value="1" checked="checked">1
-                    <input type="radio" name="dice" value="2">2
-                    <input type="radio" name="dice" value="3">3
-                    <input type="radio" name="dice" value="4">4
+            <div class="settingsRow">
+                <div class="innerSettings">
+                    <p>Number of dices</p>
+                    <div id="diceNumber">
+                        <input type="radio" name="dice" value="1" checked="checked">1
+                        <input type="radio" name="dice" value="2">2
+                        <input type="radio" name="dice" value="3">3
+                        <input type="radio" name="dice" value="4">4
+                    </div>
+                </div>
+                <div class="innerSettings">
+                    <p>Theme</p>
+                    <div id="theme">
+                        <input type="radio" name="themeSelect" value="dark" checked="checked">Dark
+                        <input type="radio" name="themeSelect" value="light">Light
+                        <input type="radio" name="themeSelect" value="custom">Custom
+                    </div>
                 </div>
             </div>
-            <div class="innerSettings">
-                <p>Dice type</p>
-                <div id="diceType">
-                    <input type="radio" name="diceT" value="Classic" checked="checked">Classic
-                    <input type="radio" name="diceT" value="Magic">Magic
+            <div class="settingsRow">
+                <div class="innerSettings">
+                    <p>Dice type</p>
+                    <div id="diceType">
+                        <input type="radio" name="diceT" value="Classic" checked="checked">Classic
+                        <input type="radio" name="diceT" value="Magic">Magic
+                    </div>
+                </div>
+                <div class="innerSettings">
+                    <p>Custom colours</p>
                 </div>
             </div>
         </div>
 
         <div class="diceBoard" id="diceBoard">
-            <!--board rows-->
+            <!--dice board rows-->
             <div class="boardRow" id="boardRow1">
             </div>
             <div class="boardRow" id="boardRow2">
