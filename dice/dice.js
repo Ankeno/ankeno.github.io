@@ -15,6 +15,8 @@ function clockNum(c) {
 };
 
 // dice roll
+var diceStats = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+
 function randomDice(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
@@ -57,6 +59,9 @@ function diceRoll() {
         let d = document.createElement('div');
         d.setAttribute('class', 'dice');
         d.innerHTML = '';
+
+        diceStats[roll-1]++;
+
 
         let dots = [];
         switch (roll) {
@@ -106,4 +111,24 @@ function diceRoll() {
             r2.appendChild(d);
         };
     };
+
+    //stats update
+    let d1 = document.getElementById('statsD1');
+    d1.innerHTML = diceStats[0];
+    let d2 = document.getElementById('statsD2');
+    d2.innerHTML = diceStats[1];
+    let d3 = document.getElementById('statsD3');
+    d3.innerHTML = diceStats[2];
+    let d4 = document.getElementById('statsD4');
+    d4.innerHTML = diceStats[3];
+    let d5 = document.getElementById('statsD5');
+    d5.innerHTML = diceStats[4];
+    let d6 = document.getElementById('statsD6');
+    d6.innerHTML = diceStats[5];
+    let d7 = document.getElementById('statsD7');
+    d7.innerHTML = diceStats[6];
+    let d8 = document.getElementById('statsD8');
+    d8.innerHTML = diceStats[7];
+    let d9 = document.getElementById('statsD9');
+    d9.innerHTML = diceStats[8];
 };
