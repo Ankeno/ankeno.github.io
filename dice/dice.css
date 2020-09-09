@@ -19,6 +19,7 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     border: 3px solid white;
+    font-size: 20px;
 }
 /* 1st row - title*/
 .title {
@@ -158,32 +159,16 @@ body {
 /* 5th row - stats*/
 .stats {
     flex: 1;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-.statsRow {
-    flex: 1;
+.statsCell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid whitesmoke;
     text-align: center;
-    vertical-align: middle;
-}
-
-.statsColumn {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    border-left: 1px solid white;
-}
-
-.statsColumnFirst {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
 }
 
 /* line separator */
