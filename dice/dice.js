@@ -16,12 +16,46 @@ function clockNum(c) {
 
 // dice roll
 var diceStats = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+var dots = [];
+
+function dotsGen(r) {
+    switch (r) {
+        case 1:
+            dots = [24];
+            break;
+        case 2:
+            dots = [12, 36];
+            break;
+        case 3:
+            dots = [12, 24, 36];
+            break;
+        case 4:
+            dots = [8, 12, 36, 40];
+            break;
+        case 5:
+            dots = [8, 12, 24, 36, 40];
+            break;
+        case 6:
+            dots = [8, 12, 22, 26, 36, 40];
+            break;
+        case 7:
+            dots = [8, 12, 22, 24, 26, 36, 40];
+            break;
+        case 8:
+            dots = [8, 10, 12, 22, 26, 36, 38, 40];
+            break;
+        case 9:
+            dots = [8, 10, 12, 22, 24, 26, 36, 38, 40];
+            break;
+    };
+    return dots;
+};
 
 function randomDice(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-function diceRoll() {
+function diceRollTrue() {
     let diceNumber = document.querySelector('input[name = "dice"]:checked').value;
     let diceContainer = document.getElementById('diceBoard');
     let diceType = document.querySelector('input[name = "diceT"]:checked').value;
@@ -55,44 +89,12 @@ function diceRoll() {
     };
 
     for (i = 0; i < diceNumber; i++) {
-        let roll = randomDice(1, diceMaxDots);
+        let diceRoll = randomDice(1, diceMaxDots);
         let d = document.createElement('div');
         d.setAttribute('class', 'dice');
         d.innerHTML = '';
-
-        diceStats[roll-1]++;
-
-
-        let dots = [];
-        switch (roll) {
-            case 1:
-                dots = [24];
-                break;
-            case 2:
-                dots = [12, 36];
-                break;
-            case 3:
-                dots = [12, 24, 36];
-                break;
-            case 4:
-                dots = [8, 12, 36, 40];
-                break;
-            case 5:
-                dots = [8, 12, 24, 36, 40];
-                break;
-            case 6:
-                dots = [8, 12, 22, 26, 36, 40];
-                break;
-            case 7:
-                dots = [8, 12, 22, 24, 26, 36, 40];
-                break;
-            case 8:
-                dots = [8, 10, 12, 22, 26, 36, 38, 40];
-                break;
-            case 9:
-                dots = [8, 10, 12, 22, 24, 26, 36, 38, 40];
-                break;
-        };
+        dotsGen(diceRoll);
+        diceStats[diceRoll - 1]++;
 
         for (k = 0; k < 49; k++) {
             let e = document.createElement('div');
@@ -111,8 +113,86 @@ function diceRoll() {
             r2.appendChild(d);
         };
     };
+    statsUpdate();
+};
 
-    //stats update
+function diceRollFake() {
+    let diceNumber = document.querySelector('input[name = "dice"]:checked').value;
+    let diceContainer = document.getElementById('diceBoard');
+    let diceType = document.querySelector('input[name = "diceT"]:checked').value;
+    let diceMaxDots = 0;
+
+    if (diceType == 'Classic') {
+        diceMaxDots = 6;
+    } else {
+        diceMaxDots = 9;
+    };
+
+    diceContainer.innerHTML = '';
+
+    if (diceNumber > 2) {
+        let dRow = document.createElement('div');
+        dRow.setAttribute('class', 'boardRow');
+        dRow.setAttribute('id', 'boardRow1');
+        dRow.innerHTML = '';
+        diceContainer.appendChild(dRow);
+        let dRow2 = document.createElement('div');
+        dRow2.setAttribute('class', 'boardRow');
+        dRow2.setAttribute('id', 'boardRow2');
+        dRow2.innerHTML = '';
+        diceContainer.appendChild(dRow2);
+    } else {
+        let dRow = document.createElement('div');
+        dRow.setAttribute('class', 'boardRow');
+        dRow.setAttribute('id', 'boardRow1');
+        dRow.innerHTML = '';
+        diceContainer.appendChild(dRow);
+    };
+
+    for (i = 0; i < diceNumber; i++) {
+        let diceRoll = randomDice(1, diceMaxDots);
+        let d = document.createElement('div');
+        d.setAttribute('class', 'dice');
+        d.innerHTML = '';
+        dotsGen(diceRoll);
+
+        for (k = 0; k < 49; k++) {
+            let e = document.createElement('div');
+            e.innerHTML = '';
+            if (dots.indexOf(k) > -1) {
+                e.setAttribute('class', 'dot');
+            };
+            d.appendChild(e);
+        };
+
+        if (i < 2) {
+            let r1 = document.getElementById('boardRow1');
+            r1.appendChild(d);
+        } else {
+            let r2 = document.getElementById('boardRow2');
+            r2.appendChild(d);
+        };
+    };
+};
+
+function megaRoll() {
+    rollButton = document.getElementById('rollBtn');
+    rollButton.disabled = true;
+    rollButton.innerHTML = '. . .';
+    diceRollFake();
+    setTimeout(diceRollFake, 200);
+    setTimeout(diceRollFake, 450);
+    setTimeout(diceRollFake, 750);
+    setTimeout(diceRollFake, 1100);
+
+    setTimeout(diceRollTrue, 1500);
+    setTimeout(function() {
+        rollButton.disabled = false;
+        rollButton.innerHTML = 'Roll';
+    }, 1550);
+};
+
+function statsUpdate() {
     let d1 = document.getElementById('statsD1');
     d1.innerHTML = diceStats[0];
     let d2 = document.getElementById('statsD2');
