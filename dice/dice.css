@@ -5,6 +5,7 @@ html {
 body {
     margin: 0 auto;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
 }
 
 .container {
@@ -19,7 +20,6 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     border: 3px solid white;
-    font-size: 20px;
 }
 /* 1st row - title*/
 .title {
@@ -49,7 +49,6 @@ body {
 
 .clock {
     flex-grow: 2;
-    font-size: 1.2em;
     color: aliceblue;
     text-align: center;
     padding: 0 0.5em 0 0;
@@ -66,22 +65,77 @@ body {
 
 /* 2nd row - settings*/
 .settings {
-    flex: 2.5;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    flex: 1.5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-.settingsRow {
-    flex: 1;
+.settings p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.settingsCell {
+    margin: 2px;
+}
+
+/*number of dice*/
+.diceNumber, .theme, .diceType{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
 
-.innerSettings {
+.radioContainer {
     flex: 1;
-    padding: 2%;
+    display: block;
+    position: relative;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    margin: 1px 1px;
+    cursor: pointer;
+    width: 20px;
+}
+
+.radioContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radioContainer input:checked ~ .radioBtn {
+    background-color: aliceblue;
+}
+
+.radioContainer input:checked ~ .radioBtn:after {
+    display: block;
+}
+
+.radioContainer .radioBtn:after {
+    top: 8px;
+    left: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: cyan;
+}
+
+.radioBtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+.radioBtn:after {
+    content: "";
+    position: absolute;
+    display: none;
 }
 
 /* 3rd row - dice board*/
@@ -143,7 +197,7 @@ body {
     color: black;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 30px;
+    font-size: 150%;
     font-weight: bold;
     padding-top: 4px;
     padding-bottom: 4px;
@@ -174,4 +228,102 @@ body {
 /* line separator */
 .stats, .roll, .diceBoard, .settings {
     border-top: 1px solid white;
+}
+
+/*screen size*/
+
+@media only screen and (max-width: 499px) {
+    body {font-size: 18px;}
+    .titleLink {font-size: 150%;}
+    .clock {display: none;}
+    .dice {
+        height: 160px;
+        width: 160px;
+    }
+    /*radio buttons*/
+    .radioContainer {
+        padding-left: 22px;
+        width: 12px;
+    }
+    .radioContainer .radioBtn:after {
+        top: 5px;
+        left: 5px;
+        width: 9px;
+        height: 9px;
+    }
+    .radioBtn {
+        height: 18px;
+        width: 18px;
+    }
+    .diceType, .theme {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    body {font-size: 16px;}
+    .titleLink {font-size: 150%;}
+    .clock {display: none;}
+    .dice {
+        height: 140px;
+        width: 140px;
+    }
+    /*radio buttons*/
+    .radioContainer {
+        padding-left: 22px;
+        width: 12px;
+    }
+    .radioContainer .radioBtn:after {
+        top: 5px;
+        left: 5px;
+        width: 9px;
+        height: 9px;
+    }
+    .radioBtn {
+        height: 18px;
+        width: 18px;
+    }
+    .diceType, .theme {
+        align-items: center;
+    }
+    .diceType {font-size: 15px;}
+}
+
+@media only screen and (max-width: 321px) {
+    body {font-size: 15px;}
+    .titleLink {font-size: 150%;}
+    .clock {display: none;}
+    .dice {
+        height: 100px;
+        width: 100px;
+    }
+    /*radio buttons*/
+    .radioContainer {
+        padding-left: 22px;
+        width: 12px;
+    }
+    .radioContainer .radioBtn:after {
+        top: 5px;
+        left: 5px;
+        width: 9px;
+        height: 9px;
+    }
+    .radioBtn {
+        height: 18px;
+        width: 18px;
+    }
+    .diceType, .theme {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (min-width: 700px) {
+    .diceType label {padding-left: 70px;}
+    .diceType .radioBtn {left: 40px;}
+    .theme label {padding-left: 80px;}
+    .theme .radioBtn {left: 50px;}
+    .diceNumber label {padding-left: 50px;}
+    .diceNumber .radioBtn {left: 20px;}
 }

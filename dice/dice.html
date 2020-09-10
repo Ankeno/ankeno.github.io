@@ -19,36 +19,56 @@
         </div>
 
         <div class="settings">
-            <div class="settingsRow">
-                <div class="innerSettings">
-                    <p>Number of dices</p>
-                    <div id="diceNumber">
-                        <input type="radio" name="dice" value="1" checked="checked">1
-                        <input type="radio" name="dice" value="2">2
-                        <input type="radio" name="dice" value="3">3
-                        <input type="radio" name="dice" value="4">4
-                    </div>
-                </div>
-                <div class="innerSettings">
-                    <p>Theme</p>
-                    <div id="theme">
-                        <input type="radio" name="themeSelect" value="dark" checked="checked">Dark
-                        <input type="radio" name="themeSelect" value="light">Light
-                        <input type="radio" name="themeSelect" value="custom">Custom
-                    </div>
+            <div class="settingsCell">
+                <p>Number of dices</p>
+                <div class="diceNumber" id="diceNumber">
+                    <label class="radioContainer">1
+                        <input type="radio" name="dice" value="1" checked="checked">
+                        <span class="radioBtn"></span>
+                    </label>
+                    <label class="radioContainer">2
+                        <input type="radio" name="dice" value="2">
+                        <span class="radioBtn"></span>
+                    </label>
+                    <label class="radioContainer">3
+                        <input type="radio" name="dice" value="3">
+                        <span class="radioBtn"></span>
+                    </label>
+                    <label class="radioContainer">4
+                        <input type="radio" name="dice" value="4">
+                        <span class="radioBtn"></span>
+                    </label>
                 </div>
             </div>
-            <div class="settingsRow">
-                <div class="innerSettings">
-                    <p>Dice type</p>
-                    <div id="diceType">
-                        <input type="radio" name="diceT" value="Classic">Classic
-                        <input type="radio" name="diceT" value="Magic" checked="checked">Magic
-                    </div>
+            <div class="settingsCell">
+                <p>Theme</p>
+                <div class="theme" id="theme">
+                    <label class="radioContainer">Light
+                        <input type="radio" name="themeSelect" value="light">
+                        <span class="radioBtn"></span>
+                    </label>
+                    <label class="radioContainer">Dark
+                        <input type="radio" name="themeSelect" value="dark" checked="checked">
+                        <span class="radioBtn"></span>
+                    </label>
                 </div>
-                <div class="innerSettings">
-                    <p>time roll and sound</p>
+            </div>
+            <div class="settingsCell">
+                <p>Dice type</p>
+                <div class="diceType" id="diceType">
+                    <label class="radioContainer">Classic
+                        <input type="radio" name="diceT" value="Classic">
+                        <span class="radioBtn"></span>
+                    </label>
+                    <label class="radioContainer">Magic
+                        <input type="radio" name="diceT" value="Magic" checked="checked">
+                        <span class="radioBtn"></span>
+                    </label>
                 </div>
+            </div>
+            <div class="settingsCell">
+                <p>sound and counter</p>
+
             </div>
         </div>
 
