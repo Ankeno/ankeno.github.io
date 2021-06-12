@@ -15,7 +15,8 @@ function clockNum(c) {
 };
 
 // dice roll
-var diceStats = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+var diceStats = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+var rollCount = 0;
 var dots = [];
 
 function dotsGen(r) {
@@ -113,6 +114,7 @@ function diceRollTrue() {
             r2.appendChild(d);
         };
     };
+    rollCount = rollCount+1;
     statsUpdate();
 };
 
@@ -211,4 +213,6 @@ function statsUpdate() {
     d8.innerHTML = diceStats[7];
     let d9 = document.getElementById('statsD9');
     d9.innerHTML = diceStats[8];
+    let counter = document.getElementById('rollCount');
+    counter.innerHTML = rollCount;
 };
