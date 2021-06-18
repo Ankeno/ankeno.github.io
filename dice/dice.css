@@ -78,6 +78,10 @@ body {
 }
 
 .settingsCell {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
     margin: 2px;
 }
 
@@ -142,6 +146,25 @@ body {
     content: "";
     position: absolute;
     display: none;
+}
+
+.soundBtnContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.soundBtn {
+    background-color: black;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    color: greenyellow;
+    cursor: pointer;
 }
 
 /* 3rd row - dice board*/

@@ -18,6 +18,7 @@ function clockNum(c) {
 var diceStats = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 var rollCount = 0;
 var dots = [];
+var sound = true;
 
 function dotsGen(r) {
     switch (r) {
@@ -178,20 +179,35 @@ function diceRollFake() {
 };
 
 function megaRoll() {
+let dice1 = new Audio('dice_single.mp3');
+let dice2 = new Audio('dice_double.mp3');
+let diceN = document.querySelector('input[name = "dice"]:checked').value;
+
+    if (sound) {
+        console.log("sound");
+        if (diceN == 1) {
+            dice1.play();
+            console.log("dice1");
+        } else {
+            console.log("dice2");
+            dice2.play();
+        }
+    }
+
     rollButton = document.getElementById('rollBtn');
     rollButton.disabled = true;
     rollButton.innerHTML = '. . .';
     diceRollFake();
+    setTimeout(diceRollFake, 100);
     setTimeout(diceRollFake, 200);
-    setTimeout(diceRollFake, 450);
-    setTimeout(diceRollFake, 750);
-    setTimeout(diceRollFake, 1100);
+    setTimeout(diceRollFake, 300);
+    setTimeout(diceRollFake, 400);
 
-    setTimeout(diceRollTrue, 1500);
+    setTimeout(diceRollTrue, 500);
     setTimeout(function() {
         rollButton.disabled = false;
         rollButton.innerHTML = 'Roll';
-    }, 1550);
+    }, 650);
 };
 
 function statsUpdate() {
@@ -214,5 +230,18 @@ function statsUpdate() {
     let d9 = document.getElementById('statsD9');
     d9.innerHTML = diceStats[8];
     let counter = document.getElementById('rollCount');
-    counter.innerHTML = rollCount;
+    counter.innerHTML = `Roll Count: ${rollCount}`;
+};
+
+function soundBtn() {
+    let soundB = document.getElementById('soundBtn');
+    if (sound) {
+        sound = false;
+        soundB.innerHTML = "Sound: Off";
+        soundB.style.color = "red";
+    } else {
+        sound = true;
+        soundB.innerHTML = "Sound: On";
+        soundB.style.color = "greenyellow";
+    }
 };

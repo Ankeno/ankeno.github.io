@@ -13,7 +13,7 @@
 
     <div class="container">
         <div class="title">
-            <a href="../index.html" class="back">Back</a>
+            <a href="../index.html" class="back">Home</a>
             <a href="dice.html" class="titleLink">Dice Roller</a>
             <div class="clock" id="clock">ccc</div>
         </div>
@@ -54,8 +54,12 @@
                 </div>
             </div>
             <div class="settingsCell">
-                <p>Roll Count</p>
-                <p id="rollCount">0</p>
+                <div class="soundBtnContainer">
+                    <button class="soundBtn" id="soundBtn" onclick="soundBtn()">Sound: On</button>
+                </div>
+                <div>
+                    <p id="rollCount">Roll Count: 0</p>
+                </div>
             </div>
         </div>
 
@@ -65,17 +69,14 @@
             </div>
             <div class="boardRow" id="boardRow2">
             </div>
-
-
         </div>
 
         <div class="roll">
             <button class="rollBtn" id="rollBtn" onclick="megaRoll()">Roll</button>
         </div>
 
-
         <div class="stats">
-            <div class="statsCell">Dice value</div>
+            <div class="statsCell">Dice number</div>
             <div class="statsCell">1</div>
             <div class="statsCell">2</div>
             <div class="statsCell">3</div>
