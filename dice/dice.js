@@ -198,12 +198,10 @@ let diceN = document.querySelector('input[name = "dice"]:checked').value;
     rollButton.disabled = true;
     rollButton.innerHTML = '. . .';
     diceRollFake();
-    setTimeout(diceRollFake, 100);
     setTimeout(diceRollFake, 200);
-    setTimeout(diceRollFake, 300);
     setTimeout(diceRollFake, 400);
 
-    setTimeout(diceRollTrue, 500);
+    setTimeout(diceRollTrue, 600);
     setTimeout(function() {
         rollButton.disabled = false;
         rollButton.innerHTML = 'Roll';
