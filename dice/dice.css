@@ -35,6 +35,12 @@ body {
     flex-grow: 2;
     text-align: center;
     text-decoration: none;
+    transition-duration: 1s;
+}
+
+.back:hover {
+    color: yellow;
+    transition-duration: 1s;
 }
 
 .titleLink {
@@ -45,6 +51,12 @@ body {
     margin: auto;
     text-decoration: none;
     font-weight: bold;
+    transition-duration: 1s;
+}
+
+.titleLink:hover {
+    color: lime;
+    transition-duration: 1s;
 }
 
 .clock {
@@ -57,7 +69,7 @@ body {
     margin-left: auto;
     margin-top: auto;
     margin-bottom: auto;
-    transition-duration: 2.s;
+    transition-duration: 2s;
 }
 .clock:hover {
     color: yellow;
@@ -109,6 +121,10 @@ body {
     width: 20px;
 }
 
+.radioContainer:hover {
+    color: lime;
+}
+
 .radioContainer input {
     position: absolute;
     opacity: 0;
@@ -129,7 +145,7 @@ body {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: cyan;
+    background: darkred;
 }
 
 .radioBtn {
@@ -231,12 +247,18 @@ body {
     padding-top: 4px;
     padding-bottom: 4px;
     cursor: pointer;
-    /*transition-duration: 0.1s;*/
     outline: none;
+    transition-duration: 0.5s;
 }
 
 .rollBtn:active {
     background-color: cyan;
+}
+
+.rollBtn:hover {
+    color: lime;
+    background-color: darkslategray;
+    transition-duration: 0.5s;
 }
 
 /* 5th row - stats*/
