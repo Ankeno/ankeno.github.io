@@ -1,0 +1,431 @@
+html {
+    background-color: black;
+}
+
+body {
+    margin: 0 auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+.container {
+    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 800px;
+    background-color: rgb(5, 26, 54);
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border: 3px solid white;
+}
+/* 1st row - title*/
+.title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex: 0.5;
+    align-items: center;
+}
+
+.back {
+    color: aliceblue;
+    flex-grow: 2;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 1s;
+}
+
+.back:hover {
+    color: yellow;
+    transition-duration: 1s;
+}
+
+.titleLink {
+    color: yellow;
+    font-size: 200%;
+    text-align: center;
+    flex-grow: 6;
+    margin: auto;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 1s;
+}
+
+.titleLink:hover {
+    color: lime;
+    transition-duration: 1s;
+}
+
+.clock {
+    flex-grow: 2;
+    color: aliceblue;
+    text-align: center;
+    padding: 0 0.5em 0 0;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition-duration: 2s;
+}
+.clock:hover {
+    color: yellow;
+}
+
+/* 2nd row - car info*/
+.carInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.carInfo p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.carInfoCell {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
+    margin: 2px 2px 5px 2px;
+}
+
+.carInfoHeader {
+    grid-column: 1 / span 3;
+    margin: 2px;
+    font-weight: bold;
+    font-size: 120%;
+    color: yellow;
+}
+
+.basicInfoBox {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: left;
+    margin: 2px;
+}
+
+.basicInfo{
+    margin: 2px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.carClass, .driveType, .buildType{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 3px;
+}
+
+.carClassBtn {
+    flex: 1;
+    display: block;
+    position: relative;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    margin: 1px 1px;
+    cursor: pointer;
+    width: 20px;
+}
+
+.radioButton input {
+    font-size: 18px;
+}
+
+.radioButton input {
+    /*position: absolute;
+    opacity: 0;
+    cursor: pointer;*/
+
+    width: auto;
+	/*height: 100%;*/
+	appearance: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 2px;
+    padding: 4px 8px;
+	background: #454857;
+	color: #000000bd;
+}
+
+.radioButton input:checked {
+    font-weight: bold;
+    /*border-style: solid;
+    border-radius: 4px;
+    border-color: white;*/
+    outline-style: solid;
+    outline-color: white;
+
+	/*background-image: linear-gradient(180deg, #95d891, #74bbad);
+	color: #fff;
+	box-shadow: 4px 4px #ffffff;
+	text-shadow: 0 2px 2px black;*/
+    
+}
+
+.radioButton input:before {
+	content: attr(label);
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+.radioButton input:checked ~ .radioBtn {
+    background-color: aliceblue;
+}
+
+.radioButton input:checked ~ .radioBtn:after {
+    display: block;
+}
+
+.radioContainer .radioBtn:after {
+    top: 8px;
+    left: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: darkred;
+}
+
+.radioBtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+.radioBtn:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.soundBtnContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.soundBtn {
+    background-color: black;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    color: greenyellow;
+    cursor: pointer;
+}
+
+/* 3rd row - calculate button*/
+.calc {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calcBtn {
+    background-color: white;
+    border: 4px solid black;
+    border-radius: 20px;
+    width: 65%;
+    height: 90%;
+    color: black;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 150%;
+    font-weight: bold;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    outline: none;
+    transition-duration: 0.5s;
+}
+
+.calcBtn:active {
+    background-color: cyan;
+}
+
+.calcBtn:hover {
+    color: lime;
+    background-color: darkslategray;
+    transition-duration: 0.5s;
+}
+
+/* 4th row and below - results*/
+.results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.carResult {
+    border: 1px solid white;
+}
+
+.carResultRow {
+    margin: 2px;
+    padding-left: 5px;
+    text-align: left;
+}
+
+.carResultTitle {
+    font-weight: bold;
+    text-align: center;
+    margin: 2px;
+    font-size: 120%;
+    color: rgb(218, 5, 218);
+    padding-left: 10px;
+}
+
+.carResultTitle2 {
+    font-weight: bold;
+    text-align: left;
+    margin: 1px;
+    color: greenyellow;
+    padding-left: 20px;
+}
+
+.carResult ol {
+    margin: 2px;
+}
+
+.result {
+    color: yellow;
+    font-weight: bold;
+}
+
+/* settings */
+
+.settings {
+
+}
+
+.settingsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2px;
+}
+
+.settingsCell {
+    margin: 2px;
+    border: 1px solid white;
+    padding: 0px 2px 2px 2px;
+    margin: auto;
+}
+
+/* line separator, all cells */
+.stats, .calc, .carInfo, .results, .settings {
+    border-top: 1px solid white;
+}
+
+/*screen size*/
+
+@media only screen and (max-width: 499px) {
+    body {font-size: 18px;}
+    .titleLink {font-size: 150%;}
+    .clock {display: none;}
+    .dice {
+        height: 160px;
+        width: 160px;
+    }
+    /*radio buttons*/
+    .radioContainer {
+        padding-left: 22px;
+        width: 12px;
+    }
+    .radioContainer .radioBtn:after {
+        top: 5px;
+        left: 5px;
+        width: 9px;
+        height: 9px;
+    }
+    .radioBtn {
+        height: 18px;
+        width: 18px;
+    }
+    .diceType, .theme {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    body {font-size: 16px;}
+    .titleLink {font-size: 150%;}
+    .clock {display: none;}
+    .dice {
+        height: 140px;
+        width: 140px;
+    }
+    /*radio buttons*/
+    .radioContainer {
+        padding-left: 22px;
+        width: 12px;
+    }
+    .radioContainer .radioBtn:after {
+        top: 5px;
+        left: 5px;
+        width: 9px;
+        height: 9px;
+    }
+    .radioBtn {
+        height: 18px;
+        width: 18px;
+    }
+    .diceType, .theme {
+        align-items: center;
+    }
+    .diceType {font-size: 15px;}
+}
+
+@media only screen and (max-width: 321px) {
+    body {font-size: 15px;}
+    .titleLink {font-size: 150%;}
+    .clock {display: none;}
+    .dice {
+        height: 100px;
+        width: 100px;
+    }
+    /*radio buttons*/
+    .radioContainer {
+        padding-left: 22px;
+        width: 12px;
+    }
+    .radioContainer .radioBtn:after {
+        top: 5px;
+        left: 5px;
+        width: 9px;
+        height: 9px;
+    }
+    .radioBtn {
+        height: 18px;
+        width: 18px;
+    }
+    .diceType, .theme {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (min-width: 700px) {
+    .diceType label {padding-left: 70px;}
+    .diceType .radioBtn {left: 40px;}
+    .theme label {padding-left: 80px;}
+    .theme .radioBtn {left: 50px;}
+    /*.diceNumber label {padding-left: 50px;}
+    .diceNumber .radioBtn {left: 20px;}*/
+}
