@@ -79,16 +79,17 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.carInfo p {
+.carClassTitle {
     margin-top: 2px;
     margin-bottom: 2px;
     text-align: center;
+    font-weight: bold;
 }
 
 .carInfoCell {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     justify-content: space-evenly;
     margin: 2px 2px 5px 2px;
 }
@@ -98,7 +99,8 @@ body {
     margin: 2px;
     font-weight: bold;
     font-size: 120%;
-    color: yellow;
+    color: greenyellow;
+    text-align: center;
 }
 
 .basicInfoBox {
@@ -113,7 +115,7 @@ body {
     margin: 2px;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: left;
 }
 
 .carClass, .driveType, .buildType{
@@ -141,12 +143,7 @@ body {
 }
 
 .radioButton input {
-    /*position: absolute;
-    opacity: 0;
-    cursor: pointer;*/
-
     width: auto;
-	/*height: 100%;*/
 	appearance: none;
 	outline: none;
 	cursor: pointer;
@@ -158,17 +155,8 @@ body {
 
 .radioButton input:checked {
     font-weight: bold;
-    /*border-style: solid;
-    border-radius: 4px;
-    border-color: white;*/
     outline-style: solid;
     outline-color: white;
-
-	/*background-image: linear-gradient(180deg, #95d891, #74bbad);
-	color: #fff;
-	box-shadow: 4px 4px #ffffff;
-	text-shadow: 0 2px 2px black;*/
-    
 }
 
 .radioButton input:before {
@@ -209,25 +197,6 @@ body {
     content: "";
     position: absolute;
     display: none;
-}
-
-.soundBtnContainer {
-    display: flex;
-    justify-content: center;
-}
-
-.soundBtn {
-    background-color: black;
-    border: none;
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    display: inline-block;
-    position: relative;
-    color: greenyellow;
-    cursor: pointer;
 }
 
 /* 3rd row - calculate button*/
@@ -297,6 +266,7 @@ body {
     margin: 1px;
     color: greenyellow;
     padding-left: 20px;
+    border-bottom: 1px dashed white;
 }
 
 .carResult ol {
@@ -334,98 +304,30 @@ body {
 
 /*screen size*/
 
-@media only screen and (max-width: 499px) {
+@media only screen and (max-width: 760px) {
     body {font-size: 18px;}
-    .titleLink {font-size: 150%;}
+    .titleLink {font-size: 180%;}
     .clock {display: none;}
-    .dice {
-        height: 160px;
-        width: 160px;
-    }
-    /*radio buttons*/
-    .radioContainer {
-        padding-left: 22px;
-        width: 12px;
-    }
-    .radioContainer .radioBtn:after {
-        top: 5px;
-        left: 5px;
-        width: 9px;
-        height: 9px;
-    }
-    .radioBtn {
-        height: 18px;
-        width: 18px;
-    }
-    .diceType, .theme {
-        font-size: 16px;
-    }
+    .carInfo {grid-template-columns: 1fr 1fr;}
+    .carInfoHeader {grid-column: 1 / span 2;}
 }
 
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 480px) {
     body {font-size: 16px;}
     .titleLink {font-size: 150%;}
     .clock {display: none;}
-    .dice {
-        height: 140px;
-        width: 140px;
-    }
-    /*radio buttons*/
-    .radioContainer {
-        padding-left: 22px;
-        width: 12px;
-    }
-    .radioContainer .radioBtn:after {
-        top: 5px;
-        left: 5px;
-        width: 9px;
-        height: 9px;
-    }
-    .radioBtn {
-        height: 18px;
-        width: 18px;
-    }
-    .diceType, .theme {
-        align-items: center;
-    }
-    .diceType {font-size: 15px;}
+    .carInfo {grid-template-columns: 1fr;}
+    .carInfoHeader {grid-column: 1;}
 }
-
+/*
 @media only screen and (max-width: 321px) {
     body {font-size: 15px;}
     .titleLink {font-size: 150%;}
     .clock {display: none;}
-    .dice {
-        height: 100px;
-        width: 100px;
-    }
-    /*radio buttons*/
-    .radioContainer {
-        padding-left: 22px;
-        width: 12px;
-    }
-    .radioContainer .radioBtn:after {
-        top: 5px;
-        left: 5px;
-        width: 9px;
-        height: 9px;
-    }
-    .radioBtn {
-        height: 18px;
-        width: 18px;
-    }
-    .diceType, .theme {
-        flex-direction: column;
-        align-items: center;
-    }
-
+    .carInfo {grid-template-columns: 1fr;}
+    .carInfoHeader {grid-column: 1;}
 }
 
 @media only screen and (min-width: 700px) {
-    .diceType label {padding-left: 70px;}
-    .diceType .radioBtn {left: 40px;}
-    .theme label {padding-left: 80px;}
-    .theme .radioBtn {left: 50px;}
-    /*.diceNumber label {padding-left: 50px;}
-    .diceNumber .radioBtn {left: 20px;}*/
-}
+    .carInfo {grid-template-columns: 1fr 1fr;}
+}*/

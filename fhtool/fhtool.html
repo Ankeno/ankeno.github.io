@@ -21,7 +21,7 @@
         <div class="carInfo">
             <p class="carInfoHeader">Car info input</p>
             <div class="carInfoCell">
-                <p>Class</p>
+                <p class="carClassTitle">Class</p>
                 <div class="carClass" id="carClass">
                     <label class="radioButton">
                         <input label="D" type="radio" name="carClass" value="D" style="background-color: lightskyblue;">
@@ -42,7 +42,7 @@
                         <input label="S2" type="radio" name="carClass" value="S2" style="background-color: blue;">
                     </label>
                 </div>
-                <p>Drive Type</p>
+                <p class="carClassTitle">Drive Type</p>
                 <div class="driveType" id="driveType">
                     <label class="radioButton">
                         <input label="AWD" type="radio" name="driveType" value="AWD">
@@ -54,7 +54,7 @@
                         <input label="FWD" type="radio" name="driveType" value="FWD">
                     </label>
                 </div>
-                <p>Build type</p>
+                <p class="carClassTitle">Build type</p>
                 <div class="buildType" id="carBuild">
                     <label class="radioButton">
                         <input label="Road" type="radio" name="carBuild" value="Road" checked="checked" style="background-image: linear-gradient(to right, blue , purple);">
@@ -94,8 +94,14 @@
                 </div>
             </div>
             <div class="carInfoCell">
-                <div>Tyre info</div>
-                <p>Ride height</p>
+                <p class="carResultTitle2">Tyre info</p>
+                <div class="basicInfo">
+                    Front/rear tyre width
+                </div>
+                <div class="basicInfo">
+                    Front/rear rim size
+                </div>
+                <p class="carResultTitle2">Ride height</p>
                 <div class="basicInfo">
                     <label>Front:</label>
                     <input type="number" id="frontHeight" min="1" max="90" step="0.1" value="14.5">
@@ -114,20 +120,22 @@
         <div class="results">
             <div class="carResult">
                 <p class="carResultTitle">Tyres</p>
-                <p class="carResultRow">Between 1.8 and 2.4 BAR</p>
+                <p class="carResultRow">Try between 1.8 and 2.4 BAR. Adjust further in game.</p>
             </div>
             <div class="carResult">
                 <p class="carResultTitle">Gearing</p>
-                <p class="carResultRow">Final Drive: 2.97, 3.03-3.14, 3,52 , 3,92 , 4.51</p>
-                <p class="carResultRow">Gears (1st to 9th): 2.89 1.99 1.49 1.16 0.94 0.78 0.66 0.58 0.48</p>
+                <p class="carResultRow">Final Drive: try <span class="result">2.97, 3.03-3.14, 3,52 , 3,92 or 4.51</span> Tune further in game.</p>
+                <p class="carResultRow">Gears (1st to 9th): <span class="result">2.89 1.99 1.49 1.16 0.94 0.78 0.66 0.58 0.48</span></p>
             </div>
             <div class="carResult">
                 <p class="carResultTitle">Alignment</p>
-                <p class="carResultRow">Camber: tune in game</p>
+                <p class="carResultTitle2">Camber</p>
+                <p class="carResultRow">Tune in game, maybe at a roundabout...</p>
                 <p class="carResultTitle2">Toe</p>
-                <p class="carResultRow">Front: 0.1</p>
-                <p class="carResultRow">Rear: -0.1</p>
-                <p class="carResultRow">Front Caster: 5-7</p>
+                <p class="carResultRow">Front: <span class="result">0.1</span></p>
+                <p class="carResultRow">Rear: <span class="result">-0.1</span></p>
+                <p class="carResultTitle2">Front Caster</p>
+                <p class="carResultRow">Try between <span class="result">5 and 7</span></p>
             </div>
             <div class="carResult">
                 <p class="carResultTitle">Antiroll bars</p>
@@ -150,17 +158,17 @@
             </div>
             <div class="carResult">
                 <p class="carResultTitle">Aero</p>
-                <p class="carResultRow">Front</p>
-                <p class="carResultRow">Rear</p>
+                <p class="carResultRow">Front: <span class="result">?</span></p>
+                <p class="carResultRow">Rear: <span class="result">?</span></p>
             </div>
             <div class="carResult">
                 <p class="carResultTitle">Brake</p>
-                <p class="carResultRow">Front/rear balance:</p>
-                <p class="carResultRow">Break force:</p>
+                <p class="carResultRow">Front/rear balance: <span class="result">?</span></p>
+                <p class="carResultRow">Break force: <span class="result">110%?</span></p>
             </div>
             <div class="carResult">
                 <p class="carResultTitle">Differential</p>
-                Differential
+                <p class="carResultRow">30% Acceleration (RWD), 10% Deceleration?</p>
             </div>
         </div>
         <div class="settings">
