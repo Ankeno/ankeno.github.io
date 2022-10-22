@@ -118,6 +118,14 @@ body {
     justify-content: left;
 }
 
+.carInfo2 {
+    font-weight: bold;
+    text-align: left;
+    margin: 1px;
+    color: greenyellow;
+    padding-left: 20px;
+}
+
 .carClass, .driveType, .buildType{
     display: flex;
     flex-direction: row;
@@ -297,8 +305,52 @@ body {
     margin: auto;
 }
 
+/* extra */
+
+.extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.extraBox {
+    border: 1px solid white;
+}
+
+.extraRow {
+    margin: 2px;
+    padding-left: 5px;
+    text-align: left;
+}
+
+.extraTitle {
+    font-weight: bold;
+    text-align: center;
+    margin: 2px;
+    font-size: 120%;
+    color: rgb(218, 5, 218);
+    padding-left: 10px;
+}
+
+.extraTitle2 {
+    font-weight: bold;
+    text-align: left;
+    margin: 1px;
+    color: greenyellow;
+    padding-left: 20px;
+    border-bottom: 1px dashed white;
+}
+
+.extraBox ol {
+    margin: 2px;
+}
+
+.extraYellText {
+    color: yellow;
+    font-weight: bold;
+}
+
 /* line separator, all cells */
-.stats, .calc, .carInfo, .results, .settings {
+.stats, .calc, .carInfo, .results, .settings, .extra {
     border-top: 1px solid white;
 }
 

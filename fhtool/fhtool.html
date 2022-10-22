@@ -68,7 +68,8 @@
                 </div>
             </div>
             <div class="carInfoCell">
-                <div class="basicInfo">
+                <!--
+				<div class="basicInfo">
                     <label>Power(kW):</label>
                     <input type="number" id="carPower" min="1" max="9000" step="1" value="148">
                 </div>
@@ -76,6 +77,7 @@
                     <label>Torque(Nm):</label>
                     <input type="number" id="carTorque" min="1" max="9000" step="1" value="259">
                 </div>
+				-->
                 <div class="basicInfo">
                     <label>Weight(kg):</label>
                     <input type="number" id="carWeight" min="1" max="9000" step="1" value="1029">
@@ -84,6 +86,7 @@
                     <label>Front(%):</label>
                     <input type="number" id="carFront" min="1" max="100" step="1" value="45">
                 </div>
+				<!--
                 <div class="basicInfo">
                     <label>Displacement:</label>
                     <input type="number" id="carDisplacement" min="1" max="9000" step="1" value="1660">
@@ -92,22 +95,25 @@
                     <label>Top Speed(kph):</label>
                     <input type="number" id="carTopSpeed" min="60" max="600" step="1" value="252">
                 </div>
+				-->
             </div>
             <div class="carInfoCell">
-                <p class="carResultTitle2">Tyre info</p>
+				<!--
+                <p class="carInfo2">Tyre info</p>
                 <div class="basicInfo">
                     Front/rear tyre width
                 </div>
                 <div class="basicInfo">
                     Front/rear rim size
                 </div>
-                <p class="carResultTitle2">Ride height</p>
+				-->
+                <p class="carInfo2">Ride height</p>
                 <div class="basicInfo">
-                    <label>Front:</label>
+                    <label>Front(cm):</label>
                     <input type="number" id="frontHeight" min="1" max="90" step="0.1" value="14.5">
                 </div>
                 <div class="basicInfo">
-                    <label>Rear:</label>
+                    <label>Rear(cm):</label>
                     <input type="number" id="rearHeight" min="1" max="90" step="0.1" value="14.5">
                 </div>
             </div>
@@ -121,6 +127,7 @@
             <div class="carResult">
                 <p class="carResultTitle">Tyres</p>
                 <p class="carResultRow">Try between 1.8 and 2.4 BAR. Adjust further in game.</p>
+				<p class="carResultRow">Lower = more grip, higher = more responsive.</p>
             </div>
             <div class="carResult">
                 <p class="carResultTitle">Gearing</p>
@@ -172,7 +179,7 @@
             </div>
         </div>
         <div class="settings">
-            <p class="carResultTitle">Settings</p>
+            <p class="carResultTitle">Settings and Extra</p>
             <div class="settingsContainer">
                 <div class="settingsCell">
                     <span>ARB ratio:</span>
@@ -188,10 +195,27 @@
                 </div>
             </div>
         </div>
-
-        
-
-
+		<div class="extra">
+			<div class="extraBox">
+                <p class="extraTitle">Engine</p>
+                <p class="extraRow">Swaps to try:</p>
+                <p class="extraRow"><span class="extraYellText">1.6/2.0L I4 VVT</span></p>
+				<p class="extraRow"><span class="extraYellText">3.2 I6</span></p>
+				<p class="extraRow"><span class="extraYellText">3.0L V8 Racing</span></p>
+				<p class="extraRow"><span class="extraYellText">6.2L V8</span></p>
+				<p class="extraRow"><span class="extraYellText">Racing 7.2L V8</span></p>
+				<p class="extraRow"><span class="extraYellText">5.2/8.4 V10</span></p>
+				<p class="extraRow"><span class="extraYellText">Racing V12</span></p>
+            </div>
+			<div class="extraBox">
+                <p class="extraTitle">Upgrades</p>
+				<p class="extraRow">Aspiration: <span id="frontSpring" class="extraYellText">upgrade first</span></p>
+                <p class="extraRow">Centrifugal supercharger <span id="frontSpring" class="extraYellText">?</span></p>
+                <p class="extraRow">Rollcage: <span id="rearSpring" class="extraYellText">not worth it?</span></p>
+				<p class="extraRow">Weight: <span id="rearSpring" class="extraYellText">try weight reduction?</span></p>
+            </div>
+		</div>
+		
     </div>
 
 </body>
