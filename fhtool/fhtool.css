@@ -19,6 +19,16 @@ body {
     flex-wrap: nowrap;
     border: 3px solid white;
 }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+    appearance: textfield;
+}
+
 /* 1st row - title*/
 .title {
     display: flex;
@@ -116,6 +126,10 @@ body {
     display: flex;
     flex-wrap: nowrap;
     justify-content: left;
+}
+
+.basicInfo input {
+    width: 3em;
 }
 
 .carInfo2 {
@@ -303,6 +317,10 @@ body {
     border: 1px solid white;
     padding: 0px 2px 2px 2px;
     margin: auto;
+}
+
+.settingsCell input {
+    width: 3em;
 }
 
 /* extra */
