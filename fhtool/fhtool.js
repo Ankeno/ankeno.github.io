@@ -17,6 +17,7 @@ function clockNum(c) {
 // calculate
 
 const springNumber = 2.8875;
+// old value 2.8875
 
 //document.getElementById('pcalcr').innerHTML = `Result: ${rn}%`
 
@@ -69,8 +70,8 @@ function calculate() {
 		x = 3;
 	};
 
-    let fRebound = carFront/100*(reboundMax-reboundMin)*reboundRatio/10+reboundMin-x;
-    let rRebound = (100-carFront)/100*(reboundMax-reboundMin)*reboundRatio/10+reboundMin-x;
+    let fRebound = carFront/100*(reboundMax-reboundMin)*reboundRatio*2/10+reboundMin-x;
+    let rRebound = (100-carFront)/100*(reboundMax-reboundMin)*reboundRatio*2/10+reboundMin-x;
     document.getElementById('frontRebound').innerHTML = Math.round(fRebound*10)/10;
     document.getElementById('rearRebound').innerHTML = Math.round(rRebound*10)/10;
 
