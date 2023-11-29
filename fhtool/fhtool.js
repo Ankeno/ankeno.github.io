@@ -14,12 +14,31 @@ function clockNum(c) {
     return c;
 };
 
+
+// setting sliders
+var sliderArb = document.getElementById("arbRatio");
+var outputArb = document.getElementById("arbOutput");
+outputArb.innerHTML = sliderArb.value;
+sliderArb.oninput = function() {
+    outputArb.innerHTML = this.value;
+}
+
+var sliderRebound = document.getElementById("reboundRatio");
+var outputRebound = document.getElementById("reboundOutput");
+outputRebound.innerHTML = sliderRebound.value;
+sliderRebound.oninput = function() {
+    outputRebound.innerHTML = this.value;
+}
+
+var sliderBump = document.getElementById("bumpRatio");
+var outputBump = document.getElementById("bumpOutput");
+outputBump.innerHTML = sliderBump.value;
+sliderBump.oninput = function() {
+    outputBump.innerHTML = this.value;
+}
+
 // calculate
-
 const springNumber = 2.8875;
-// old value 2.8875
-
-//document.getElementById('pcalcr').innerHTML = `Result: ${rn}%`
 
 function calculate() {
     //from car info
