@@ -15,7 +15,7 @@
         <div class="title">
             <a href="../index.html" class="back">Home</a>
             <a href="fhtool.html" class="titleLink">Forza Horizon Tool</a>
-            <div class="clock" id="clock">ccc</div>
+            <div class="clock" id="clock"></div>
         </div>
 
         <div class="carInfo">
@@ -57,13 +57,13 @@
                 <p class="carClassTitle">Build type</p>
                 <div class="buildType" id="carBuild">
                     <label class="radioButton">
-                        <input label="Road" type="radio" name="carBuild" value="Road" checked="checked" style="background-image: linear-gradient(to right, blue , purple);">
+                        <input label="Road" type="radio" name="carBuild" value="Road" checked="checked" style="background-image: linear-gradient(to right, rgb(131, 131, 255) , rgb(207, 111, 207));">
                     </label>
                     <label class="radioButton">
-                        <input label="Rally" type="radio" name="carBuild" value="Rally" style="background-color: orange;">
+                        <input label="Dirt" type="radio" name="carBuild" value="Dirt" style="background-color: orange;">
                     </label>
                     <label class="radioButton">
-                        <input label="Offroad" type="radio" name="carBuild" value="Offroad" style="background-color: darkgreen;">
+                        <input label="C-C" type="radio" name="carBuild" value="C-C" style="background-color: darkgreen;">
                     </label>
                 </div>
             </div>
@@ -120,7 +120,7 @@
         </div>
 
         <div class="calc">
-            <button class="calcBtn" id="calcBtn" onclick="calculate()">Calculate</button>
+            <button class="calcBtn" id="calcBtn" onclick="calculate()">Gas gas gas...</button>
         </div>
 
         <div class="results">
@@ -131,7 +131,7 @@
             </div>
             <div class="carResult">
                 <p class="carResultTitle">Gearing</p>
-                <p class="carResultRow">Final Drive: <span class="result">2.97, 3.03-3.14, 3,52 , 3,92 or 4.51</span> Tune further in game.</p>
+                <p class="carResultRow">Final Drive: <span class="result">2.97, 3.03-3.14, 3,52 , 3,92 or 4.51</span></p>
                 <p class="carResultRow">Gears (1st to 9th): <span class="result">2.89 1.99 1.49 1.16 0.94 0.78 0.66 0.58 0.48</span></p>
             </div>
             <div class="carResult">
@@ -142,7 +142,7 @@
                 <p class="carResultRow">Front: <span class="result">0.1</span></p>
                 <p class="carResultRow">Rear: <span class="result">-0.1</span></p>
                 <p class="carResultTitle2">Front Caster</p>
-                <p class="carResultRow">Try between <span class="result">5 and 7</span></p>
+                <p class="carResultRow">Between <span class="result">5 and 7</span></p>
             </div>
             <div class="carResult">
                 <p class="carResultTitle">Antiroll bars</p>
@@ -183,11 +183,11 @@
             <div class="settingsContainer">
                 <div class="settingsCell">
                     <p>ARB ratio: <span id="arbOutput"></span></p>
-                    <input type="range" class="slider" id="arbRatio" min="1" max="10" step="0.1" value="6.5">
+                    <input type="range" class="slider" id="arbRatio" min="1" max="10" step="0.1" value="10">
                 </div>
                 <div class="settingsCell">
 					<p>Rebound ratio: <span id="reboundOutput"></span></p>
-					<input type="range" class="slider" id="reboundRatio" min="1" max="10" step="0.1" value="4">	
+					<input type="range" class="slider" id="reboundRatio" min="1" max="10" step="0.1" value="3.5">	
                 </div>
                 <div class="settingsCell">
                     <p>Bump ratio: <span id="bumpOutput"></span></p>

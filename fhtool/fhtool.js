@@ -57,11 +57,19 @@ function calculate() {
     //antiroll bars
     let arbMin = 1;
     let arbMax = 65;
-    let arbFront = (arbRatio/10)*(carFront/100*(arbMax-arbMin))+arbMin;
+
+    let arbFront = arbMin+(15*carFront/100);
     document.getElementById('arbFront').innerHTML = Math.round(arbFront*10)/10;
     
-    let arbRear = (arbRatio/10)*((100-carFront)/100*(arbMax-arbMin))+arbMin;
+    let arbRear = arbMax-(15*(100-carFront)/100);
     document.getElementById('arbRear').innerHTML = Math.round(arbRear*10)/10;
+
+    //old formulas
+    //let arbFront = (arbRatio/10)*(carFront/100*(arbMax-arbMin))+arbMin;
+    //document.getElementById('arbFront').innerHTML = Math.round(arbFront*10)/10;
+    
+    //let arbRear = (arbRatio/10)*((100-carFront)/100*(arbMax-arbMin))+arbMin;
+    //document.getElementById('arbRear').innerHTML = Math.round(arbRear*10)/10;
 
     //springs
     let frontHeight = document.getElementById('frontHeight').value;
@@ -81,28 +89,45 @@ function calculate() {
     let reboundMax = 20;
     let bumpMin = 1;
     let bumpMax = 20;
-	let x = 0;
-	if (carBuild == "Road") {
-		x = 0;
-	}
-	else {
-		x = 3;
-	};
+	let reboundCalc;
+    switch(carBuild) {
+        case "Road":
+            reboundCalc = 16;
+            break;
+        case "Dirt":
+            reboundCalc = 24;
+            break;
+        case "C-C":
+            reboundCalc = 20;
+            break;
+    }
 
-    let fRebound = carFront/100*(reboundMax-reboundMin)*reboundRatio*2/10+reboundMin-x;
-    let rRebound = (100-carFront)/100*(reboundMax-reboundMin)*reboundRatio*2/10+reboundMin-x;
+    let fRebound = carFront/100*reboundCalc;
+    let rRebound = (100-carFront)/100*reboundCalc;
     document.getElementById('frontRebound').innerHTML = Math.round(fRebound*10)/10;
     document.getElementById('rearRebound').innerHTML = Math.round(rRebound*10)/10;
 
-    let fBump = fRebound*bumpRatio/10;
-    let rBump = rRebound*bumpRatio/10;
+    let bumpCalc;
+    switch(carBuild) {
+        case "Road":
+            bumpCalc = 6;
+            break;
+        case "Dirt":
+            bumpCalc = 6;
+            break;
+        case "C-C":
+            bumpCalc = 4;
+            break;
+    }
+    let fBump = carFront/100*bumpCalc;
+    let rBump = (100-carFront)/100*bumpCalc;
     document.getElementById('frontBump').innerHTML = Math.round(fBump*10)/10;
     document.getElementById('rearBump').innerHTML = Math.round(rBump*10)/10;
 
 
 
     //log
-    console.log("Car info:");
+    console.log("Car info values");
     console.log(carClass, carDrive, carBuild, carWeight, carFront, avgHeight);
-    console.log(x);
+    console.log(reboundCalc,bumpCalc);
 };
