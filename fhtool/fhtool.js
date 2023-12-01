@@ -6,7 +6,7 @@ function clock() {
     h = clockNum(h);
     m = clockNum(m);
     document.getElementById("clock").innerHTML = h + ":" + m;
-    var t = setTimeout(clock, 1000);
+    //var t = setTimeout(clock, 1000);
 };
 
 function clockNum(c) {
@@ -51,25 +51,24 @@ function calculate() {
     let carFront = document.getElementById('carFront').value;
     //let carDispl = document.getElementById('carDisplacement').value;
     //let carTopSpd = document.getElementById('carTopSpeed').value;
+
     //settings
     let arbRatio = document.getElementById('arbRatio').value;
 
     //antiroll bars
     let arbMin = 1;
     let arbMax = 65;
+    let arbConst = 15;
 
-    let arbFront = arbMin+(15*carFront/100);
+    let arbFront = arbMin+(arbConst*carFront/100);
     document.getElementById('arbFront').innerHTML = Math.round(arbFront*10)/10;
     
-    let arbRear = arbMax-(15*(100-carFront)/100);
+    let arbRear = arbMax-(arbConst*(100-carFront)/100);
     document.getElementById('arbRear').innerHTML = Math.round(arbRear*10)/10;
 
     //old formulas
     //let arbFront = (arbRatio/10)*(carFront/100*(arbMax-arbMin))+arbMin;
-    //document.getElementById('arbFront').innerHTML = Math.round(arbFront*10)/10;
-    
     //let arbRear = (arbRatio/10)*((100-carFront)/100*(arbMax-arbMin))+arbMin;
-    //document.getElementById('arbRear').innerHTML = Math.round(arbRear*10)/10;
 
     //springs
     let frontHeight = document.getElementById('frontHeight').value;
@@ -89,10 +88,17 @@ function calculate() {
     let reboundMax = 20;
     let bumpMin = 1;
     let bumpMax = 20;
-	let reboundCalc;
+	
+    let reboundCalc;
     switch(carBuild) {
         case "Road":
             reboundCalc = 16;
+            if(carClass == "S2") {
+                reboundCalc = 24;
+            };
+            if(carDrive == "FWD") {
+                reboundCalc =40;
+            };
             break;
         case "Dirt":
             reboundCalc = 24;
@@ -111,19 +117,63 @@ function calculate() {
     switch(carBuild) {
         case "Road":
             bumpCalc = 6;
+            if(carClass == "S2") {
+                bumpCalc = 8;
+            };
+            if(carDrive == "FWD") {
+                bumpCalc = 8.5;
+            };
             break;
         case "Dirt":
             bumpCalc = 6;
             break;
         case "C-C":
-            bumpCalc = 4;
+            bumpCalc = 5;
             break;
-    }
+    };
     let fBump = carFront/100*bumpCalc;
     let rBump = (100-carFront)/100*bumpCalc;
     document.getElementById('frontBump').innerHTML = Math.round(fBump*10)/10;
     document.getElementById('rearBump').innerHTML = Math.round(rBump*10)/10;
 
+    //differential
+    switch(carDrive) {
+        case "FWD":
+            document.getElementById('frontAcc').innerHTML = "30-60";
+            document.getElementById('frontDcc').innerHTML = "0-30";
+            document.getElementById('rearAcc').innerHTML = "x";
+            document.getElementById('rearDcc').innerHTML = "x";
+            document.getElementById('frBalance').innerHTML = "x";
+            break;
+        case "RWD":
+            document.getElementById('frontAcc').innerHTML = "x";
+            document.getElementById('frontDcc').innerHTML = "x";
+            if(carBuild == "Road") {
+                document.getElementById('rearAcc').innerHTML = "30-75";
+                document.getElementById('rearDcc').innerHTML = "0-20";    
+            }
+            else {
+                document.getElementById('rearAcc').innerHTML = "70-100";
+                document.getElementById('rearDcc').innerHTML = "25+";
+            };
+            document.getElementById('frBalance').innerHTML = "x";
+            break;
+        case "AWD":
+            if(carBuild == "Road") {
+                document.getElementById('frontAcc').innerHTML = "30-60";
+                document.getElementById('frontDcc').innerHTML = "0-5";
+                document.getElementById('rearAcc').innerHTML = "30-75";
+                document.getElementById('rearDcc').innerHTML =  "0-20";
+            }
+            else {
+                document.getElementById('frontAcc').innerHTML = "60-80";
+                document.getElementById('frontDcc').innerHTML = "5+";
+                document.getElementById('rearAcc').innerHTML = "70-100";
+                document.getElementById('rearDcc').innerHTML =  "25+";
+            };
+            document.getElementById('frBalance').innerHTML = "60-75";
+            break;
+    };
 
 
     //log

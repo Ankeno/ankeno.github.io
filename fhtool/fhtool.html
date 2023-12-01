@@ -120,7 +120,7 @@
         </div>
 
         <div class="calc">
-            <button class="calcBtn" id="calcBtn" onclick="calculate()">Gas gas gas...</button>
+            <button class="calcBtn" id="calcBtn" onclick="calculate()">Start</button>
         </div>
 
         <div class="results">
@@ -175,7 +175,11 @@
             </div>
             <div class="carResult">
                 <p class="carResultTitle">Differential</p>
-                <p class="carResultRow">30% Acceleration (RWD), 10% Deceleration?</p>
+                <p class="carResultRow">Front Acceleration: <span id="frontAcc" class="result">N/A</span></p>
+                <p class="carResultRow">Front Deceleration: <span id="frontDcc" class="result">N/A</span></p>
+                <p class="carResultRow">Rear Acceleration: <span id="rearAcc" class="result">N/A</span></p>
+                <p class="carResultRow">Rear Deceleration: <span id="rearDcc" class="result">N/A</span></p>
+                <p class="carResultRow">Front/rear balance: <span id="frBalance" class="result">N/A</span></p>
             </div>
         </div>
         <div class="settings">
