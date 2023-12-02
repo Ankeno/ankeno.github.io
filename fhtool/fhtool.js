@@ -6,36 +6,12 @@ function clock() {
     h = clockNum(h);
     m = clockNum(m);
     document.getElementById("clock").innerHTML = h + ":" + m;
-    //var t = setTimeout(clock, 1000);
 };
 
 function clockNum(c) {
     if (c < 10) { c = "0" + c };
     return c;
 };
-
-
-// setting sliders
-var sliderArb = document.getElementById("arbRatio");
-var outputArb = document.getElementById("arbOutput");
-outputArb.innerHTML = sliderArb.value;
-sliderArb.oninput = function() {
-    outputArb.innerHTML = this.value;
-}
-
-var sliderRebound = document.getElementById("reboundRatio");
-var outputRebound = document.getElementById("reboundOutput");
-outputRebound.innerHTML = sliderRebound.value;
-sliderRebound.oninput = function() {
-    outputRebound.innerHTML = this.value;
-}
-
-var sliderBump = document.getElementById("bumpRatio");
-var outputBump = document.getElementById("bumpOutput");
-outputBump.innerHTML = sliderBump.value;
-sliderBump.oninput = function() {
-    outputBump.innerHTML = this.value;
-}
 
 // calculate
 const springNumber = 2.8875;
@@ -52,9 +28,6 @@ function calculate() {
     //let carDispl = document.getElementById('carDisplacement').value;
     //let carTopSpd = document.getElementById('carTopSpeed').value;
 
-    //settings
-    let arbRatio = document.getElementById('arbRatio').value;
-
     //antiroll bars
     let arbMin = 1;
     let arbMax = 65;
@@ -63,12 +36,8 @@ function calculate() {
     let arbFront = arbMin+(arbConst*carFront/100);
     document.getElementById('arbFront').innerHTML = Math.round(arbFront*10)/10;
     
-    let arbRear = arbMax-(arbConst*(100-carFront)/100);
+    let arbRear = arbMax-(arbConst*carFront/100);
     document.getElementById('arbRear').innerHTML = Math.round(arbRear*10)/10;
-
-    //old formulas
-    //let arbFront = (arbRatio/10)*(carFront/100*(arbMax-arbMin))+arbMin;
-    //let arbRear = (arbRatio/10)*((100-carFront)/100*(arbMax-arbMin))+arbMin;
 
     //springs
     let frontHeight = document.getElementById('frontHeight').value;
@@ -82,12 +51,6 @@ function calculate() {
     document.getElementById('rearSpring').innerHTML = Math.round(rearSpring*10)/10;
 
     //damping
-    let reboundRatio = document.getElementById('reboundRatio').value;
-    let bumpRatio = document.getElementById('bumpRatio').value;
-    let reboundMin = 1;
-    let reboundMax = 20;
-    let bumpMin = 1;
-    let bumpMax = 20;
 	
     let reboundCalc;
     switch(carBuild) {
@@ -179,5 +142,4 @@ function calculate() {
     //log
     console.log("Car info values");
     console.log(carClass, carDrive, carBuild, carWeight, carFront, avgHeight);
-    console.log(reboundCalc,bumpCalc);
 };

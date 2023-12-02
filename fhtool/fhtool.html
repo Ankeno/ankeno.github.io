@@ -126,8 +126,8 @@
         <div class="results">
             <div class="carResult">
                 <p class="carResultTitle">Tyres</p>
-                <p class="carResultRow">Try between 1.5 and 2.4 BAR. Adjust further in game.</p>
-				<p class="carResultRow">Lower = gradual grip loss, higher = more responsive.</p>
+                <p class="carResultRow">Try between 1.5 and 2.4 BAR.</p>
+				<p class="carResultRow">Adjust further in game.</p>
             </div>
             <div class="carResult">
                 <p class="carResultTitle">Gearing</p>
@@ -137,7 +137,7 @@
             <div class="carResult">
                 <p class="carResultTitle">Alignment</p>
                 <p class="carResultTitle2">Camber</p>
-                <p class="carResultRow">Tune in game, maybe at a roundabout</p>
+                <p class="carResultRow">Tune in game.</p>
                 <p class="carResultTitle2">Toe</p>
                 <p class="carResultRow">Front: <span class="result">0.1</span></p>
                 <p class="carResultRow">Rear: <span class="result">-0.1</span></p>
@@ -165,8 +165,8 @@
             </div>
             <div class="carResult">
                 <p class="carResultTitle">Aero</p>
-                <p class="carResultRow">Front: <span class="result">?</span></p>
-                <p class="carResultRow">Rear: <span class="result">?</span></p>
+                <p class="carResultRow">Front: <span class="result">situational</span></p>
+                <p class="carResultRow">Rear: <span class="result">situational</span></p>
             </div>
             <div class="carResult">
                 <p class="carResultTitle">Brake</p>
@@ -175,34 +175,17 @@
             </div>
             <div class="carResult">
                 <p class="carResultTitle">Differential</p>
-                <p class="carResultRow">Front Acceleration: <span id="frontAcc" class="result">N/A</span></p>
-                <p class="carResultRow">Front Deceleration: <span id="frontDcc" class="result">N/A</span></p>
-                <p class="carResultRow">Rear Acceleration: <span id="rearAcc" class="result">N/A</span></p>
-                <p class="carResultRow">Rear Deceleration: <span id="rearDcc" class="result">N/A</span></p>
-                <p class="carResultRow">Front/rear balance: <span id="frBalance" class="result">N/A</span></p>
-            </div>
-        </div>
-        <div class="settings">
-            <p class="carResultTitle">Settings and Extra</p>
-            <div class="settingsContainer">
-                <div class="settingsCell">
-                    <p>ARB ratio: <span id="arbOutput"></span></p>
-                    <input type="range" class="slider" id="arbRatio" min="1" max="10" step="0.1" value="10">
-                </div>
-                <div class="settingsCell">
-					<p>Rebound ratio: <span id="reboundOutput"></span></p>
-					<input type="range" class="slider" id="reboundRatio" min="1" max="10" step="0.1" value="3.5">	
-                </div>
-                <div class="settingsCell">
-                    <p>Bump ratio: <span id="bumpOutput"></span></p>
-                    <input type="range" class="slider" id="bumpRatio" min="1" max="10" step="0.1" value="6.6">
-                </div>
+                <p class="carResultRow">Front Acceleration: <span id="frontAcc" class="result">-</span></p>
+                <p class="carResultRow">Front Deceleration: <span id="frontDcc" class="result">-</span></p>
+                <p class="carResultRow">Rear Acceleration: <span id="rearAcc" class="result">-</span></p>
+                <p class="carResultRow">Rear Deceleration: <span id="rearDcc" class="result">-</span></p>
+                <p class="carResultRow">Front/rear balance: <span id="frBalance" class="result">-</span></p>
             </div>
         </div>
 		<div class="extra">
 			<div class="extraBox">
                 <p class="extraTitle">Engine</p>
-                <p class="extraRow">Swaps to try:</p>
+                <p class="extraRow">Engines to try:</p>
                 <p class="extraRow"><span class="extraYellText">1.6/2.0L I4 VVT</span></p>
 				<p class="extraRow"><span class="extraYellText">3.2 I6</span></p>
 				<p class="extraRow"><span class="extraYellText">3.0L V8 Racing</span></p>
@@ -212,17 +195,11 @@
 				<p class="extraRow"><span class="extraYellText">Racing V12</span></p>
             </div>
 			<div class="extraBox">
-                <p class="extraTitle">Upgrades</p>
-				<p class="extraRow">Aspiration: <span id="frontSpring" class="extraYellText">upgrade first</span></p>
-                <p class="extraRow">Centrifugal supercharger is nice<span id="frontSpring" class="extraYellText">*</span></p>
+                <p class="extraTitle">Extra</p>
+				<p class="extraRow">Upgrades: <span id="frontSpring" class="extraYellText">Intake, exhaustupgrade first</span></p>
+                <p class="extraRow">Centrifugal supercharger is nice<span id="frontSpring" class="extraYellText">?</span></p>
                 <p class="extraRow">Rollcage: <span id="rearSpring" class="extraYellText">not worth it?</span></p>
-				<p class="extraRow">Weight reduction: <span id="rearSpring" class="extraYellText">situational</span></p>
-            </div>
-			<div class="extraBox">
-                <p class="extraTitle">Adjustments</p>
-				<p class="extraRow">ARB Ratio: oversteer, understeer?</p>
-                <p class="extraRow">Rebound ratio: Front/Rear grip?</p>
-                <p class="extraRow">Bump ratio: Front/Rear grip?</p>
+				<p class="extraRow">Weight reduction: <span id="rearSpring" class="extraYellText">situational?</span></p>
             </div>
 		</div>
 		
