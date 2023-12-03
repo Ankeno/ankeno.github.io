@@ -39,7 +39,7 @@ input[type="number"] {
 }
 
 .back {
-    color: #DDB56D;
+    color: #C09050;
     flex-grow: 2;
     text-align: center;
     text-decoration: none;
@@ -47,12 +47,12 @@ input[type="number"] {
 }
 
 .back:hover {
-    color: #E8E8E8;
+    color: #E6DD8E;
     transition-duration: 1s;
 }
 
 .titleLink {
-    color: #DDB56D;
+    color: #C09050;
     font-size: 200%;
     text-align: center;
     flex-grow: 6;
@@ -63,7 +63,7 @@ input[type="number"] {
 }
 
 .titleLink:hover {
-    color: #E8E8E8;
+    color: #E6DD8E;
     transition-duration: 1s;
 }
 
@@ -172,13 +172,19 @@ input[type="number"] {
 	border-radius: 2px;
     padding: 4px 8px;
 	background: #454857;
-	color: #000000bd;
+	color: #C09050;
+    text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .radioButton input:checked {
-    font-weight: bold;
+    color: #E6DD8E;
+    /*font-weight: bold;*/
     outline-style: solid;
-    outline-color: white;
+    outline-color: black;
 }
 
 .radioButton input:before {
@@ -221,7 +227,7 @@ input[type="number"] {
     display: none;
 }
 
-/* 3rd row - calculate button*/
+/* 3rd row - start button*/
 .calc {
     flex: 1;
     display: flex;
@@ -233,7 +239,7 @@ input[type="number"] {
     background-color: #302010;
     border: 4px solid black;
     border-radius: 20px;
-    width: 55%;
+    width: 40%;
     height: 90%;
     color: #C09050;
     text-align: center;
@@ -253,7 +259,7 @@ input[type="number"] {
 
 .calcBtn:hover {
     color: #E6DD8E;
-    background-color: #412b15;
+    background-color: #573a1c;
     transition-duration: 0.5s;
 }
 

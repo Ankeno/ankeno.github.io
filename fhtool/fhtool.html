@@ -24,19 +24,19 @@
                 <p class="carClassTitle">Class</p>
                 <div class="carClass" id="carClass">
                     <label class="radioButton">
-                        <input label="D" type="radio" name="carClass" value="D" style="background-color: lightskyblue;">
+                        <input label="D" type="radio" name="carClass" value="D" style="background-color: rgb(0, 157, 255);">
                     </label>
                     <label class="radioButton">
-                        <input label="C" type="radio" name="carClass" value="C" style="background-color: yellow;">
+                        <input label="C" type="radio" name="carClass" value="C" style="background-color: rgb(255, 255, 0);">
                     </label>
                     <label class="radioButton">
-                        <input label="B" type="radio" name="carClass" value="B" checked="checked" style="background-color: orange;">
+                        <input label="B" type="radio" name="carClass" value="B" style="background-color: orange;">
                     </label>
                     <label class="radioButton">
-                        <input label="A" type="radio" name="carClass" value="A" style="background-color: red;">
+                        <input label="A" type="radio" name="carClass" value="A" checked="checked" style="background-color: red">
                     </label>
                     <label class="radioButton">
-                        <input label="S1" type="radio" name="carClass" value="S1" style="background-color: blueviolet;">
+                        <input label="S1" type="radio" name="carClass" value="S1" style="background-color: rgb(132, 0, 255);">
                     </label>
                     <label class="radioButton">
                         <input label="S2" type="radio" name="carClass" value="S2" style="background-color: blue;">
@@ -45,25 +45,25 @@
                 <p class="carClassTitle">Drive Type</p>
                 <div class="driveType" id="driveType">
                     <label class="radioButton">
-                        <input label="AWD" type="radio" name="driveType" value="AWD">
+                        <input label="AWD" type="radio" name="driveType" value="AWD" style="background: #2b1d0e;">
                     </label>
                     <label class="radioButton">
-                        <input label="RWD" type="radio" name="driveType" value="RWD" checked="checked">
+                        <input label="RWD" type="radio" name="driveType" value="RWD" style="background: #2b1d0e;" checked="checked">
                     </label>
                     <label class="radioButton">
-                        <input label="FWD" type="radio" name="driveType" value="FWD">
+                        <input label="FWD" type="radio" name="driveType" value="FWD" style="background: #2b1d0e;">
                     </label>
                 </div>
                 <p class="carClassTitle">Build type</p>
                 <div class="buildType" id="carBuild">
                     <label class="radioButton">
-                        <input label="Road" type="radio" name="carBuild" value="Road" checked="checked" style="background-image: linear-gradient(to right, rgb(131, 131, 255) , rgb(207, 111, 207));">
+                        <input label="Road" type="radio" name="carBuild" value="Road" style="background-image: linear-gradient(to right, rgb(0, 0, 195) , rgb(204, 0, 204));" checked="checked">
                     </label>
                     <label class="radioButton">
-                        <input label="Dirt" type="radio" name="carBuild" value="Dirt" style="background-color: orange;">
+                        <input label="Dirt" type="radio" name="carBuild" value="Dirt" style="background-color: rgb(217, 141, 1);">
                     </label>
                     <label class="radioButton">
-                        <input label="C-C" type="radio" name="carBuild" value="C-C" style="background-color: darkgreen;">
+                        <input label="C-C" type="radio" name="carBuild" value="C-C" style="background-color: rgb(0, 94, 0);">
                     </label>
                 </div>
             </div>
@@ -126,7 +126,7 @@
         <div class="results">
             <div class="carResult">
                 <p class="carResultTitle">Tyres</p>
-                <p class="carResultRow">Try between 1.5 and 2.4 BAR.</p>
+                <p class="carResultRow">Between <span class="result">1.5 and 2.4</span> BAR.</p>
 				<p class="carResultRow">Adjust further in game.</p>
             </div>
             <div class="carResult">
@@ -170,8 +170,8 @@
             </div>
             <div class="carResult">
                 <p class="carResultTitle">Brake</p>
-                <p class="carResultRow">Front/rear balance: <span class="result">?</span></p>
-                <p class="carResultRow">Break force: <span class="result">110%?</span></p>
+                <p class="carResultRow">Front/rear balance: <span class="result">45-60%</span></p>
+                <p class="carResultRow">Break force: <span class="result">100-120%?</span></p>
             </div>
             <div class="carResult">
                 <p class="carResultTitle">Differential</p>
@@ -196,10 +196,10 @@
             </div>
 			<div class="extraBox">
                 <p class="extraTitle">Extra</p>
-				<p class="extraRow">Upgrades: <span id="frontSpring" class="extraYellText">Intake, exhaustupgrade first</span></p>
-                <p class="extraRow">Centrifugal supercharger is nice<span id="frontSpring" class="extraYellText">?</span></p>
-                <p class="extraRow">Rollcage: <span id="rearSpring" class="extraYellText">not worth it?</span></p>
-				<p class="extraRow">Weight reduction: <span id="rearSpring" class="extraYellText">situational?</span></p>
+				<p class="extraRow">Upgrades: <span id="frontSpring" class="extraYellText">Intake, exhaust</span></p>
+                <p class="extraRow">Centrifugal supercharger<span id="frontSpring" class="extraYellText">?</span></p>
+                <p class="extraRow">Rollcage <span id="rearSpring" class="extraYellText">not worth it?</span></p>
+				<p class="extraRow">Weight reduction <span id="rearSpring" class="extraYellText">situational?</span></p>
             </div>
 		</div>
 		

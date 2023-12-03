@@ -1,2 +1,2 @@
 # website-project
-Building a small website.
+Trying out things with HTML, CSS and JavaScript.
