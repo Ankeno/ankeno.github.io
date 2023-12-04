@@ -109,7 +109,7 @@ input[type="number"] {
     margin: 2px;
     font-weight: bold;
     font-size: 120%;
-    color: #d9bbad;
+    color: #b36f4f;
     text-align: center;
 }
 
@@ -136,7 +136,7 @@ input[type="number"] {
     font-weight: bold;
     text-align: left;
     margin: 1px;
-    color: #d9bbad;
+    color: #b36f4f;
     padding-left: 20px;
 }
 
@@ -292,7 +292,7 @@ input[type="number"] {
     font-weight: bold;
     text-align: left;
     margin: 1px;
-    color: #d9bbad;
+    color: #b36f4f;
     padding-left: 20px;
     border-bottom: 1px dashed #302010;
 }

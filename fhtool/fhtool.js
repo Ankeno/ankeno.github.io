@@ -140,6 +140,6 @@ function calculate() {
 
 
     //log
-    console.log("Car info values");
-    console.log(carClass, carDrive, carBuild, carWeight, carFront, avgHeight);
+    //console.log("Car info values");
+    //console.log(carClass, carDrive, carBuild, carWeight, carFront, avgHeight);
 };
