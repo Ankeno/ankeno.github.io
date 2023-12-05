@@ -45,10 +45,21 @@ function calculate() {
     let avgHeight = (parseFloat(frontHeight)+parseFloat(rearHeight))/2;
 
     let frontSpring = carFront/100*springNumber/avgHeight*carWeight;
-    document.getElementById('frontSpring').innerHTML = Math.round(frontSpring*10)/10;
+
+    if (carBuild == "Road") {
+        document.getElementById('frontSpring').innerHTML = Math.round(frontSpring*10)/10;    
+    }
+    else {
+        document.getElementById('frontSpring').innerHTML = "soft";
+    }
     
     let rearSpring = (100-carFront)/100*springNumber/avgHeight*carWeight;
-    document.getElementById('rearSpring').innerHTML = Math.round(rearSpring*10)/10;
+    if (carBuild == "Road"){
+        document.getElementById('rearSpring').innerHTML = Math.round(rearSpring*10)/10;    
+    }
+    else {
+        document.getElementById('rearSpring').innerHTML = "soft";
+    }
 
     //damping
 	
