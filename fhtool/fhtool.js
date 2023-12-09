@@ -71,7 +71,7 @@ function calculate() {
                 reboundCalc = 24;
             };
             if(carDrive == "FWD") {
-                reboundCalc =40;
+                reboundCalc =30;
             };
             break;
         case "Dirt":
