@@ -184,7 +184,7 @@ input[type="number"] {
     color: #E6DD8E;
     /*font-weight: bold;*/
     outline-style: solid;
-    outline-color: black;
+    outline-color: rgb(215, 205, 205);
 }
 
 .radioButton input:before {
