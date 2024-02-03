@@ -1,5 +1,7 @@
 html {
     background-color: black;
+    background-image: url("../images/bg.png");
+    height: 100%;
 }
 
 body {

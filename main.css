@@ -8,7 +8,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     background-color: rgb(0, 24, 44);
     color: aliceblue;
-    max-width: 1360px;
+    /*max-width: 1360px;*/
 }
 
 /* nav bar stuff */
@@ -112,6 +112,24 @@ body {
     transform: rotate(-60deg) translate(6px, -11px);
 }
 
+/* header */
+header {
+    padding: 10px;
+    background-color: rgb(0, 29, 73);
+}
+
+
+/* drawing area */
+.drawingArea {
+    background-image: radial-gradient(circle at 75% 80%, darkblue, lightblue, skyblue);
+    padding: 1px;
+    margin: 0;
+    size: fill;
+}
+
+
+
+
 @media screen and (max-width: 600px) {
     /*.navBar a:not(:first-child) {display: none;}*/
     .navBar a {display: none;}
@@ -141,11 +159,3 @@ body {
     }
 }
 
-
-/* footer */
-.footer {
-    padding: 10px;
-    text-align: left;
-    background-image: linear-gradient(rgb(0, 34, 49), black);
-    color: aliceblue;
-}
