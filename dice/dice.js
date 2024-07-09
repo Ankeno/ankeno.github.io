@@ -184,12 +184,9 @@ let dice2 = new Audio('dice_double.mp3');
 let diceN = document.querySelector('input[name = "dice"]:checked').value;
 
     if (sound) {
-        console.log("sound");
         if (diceN == 1) {
             dice1.play();
-            console.log("dice1");
         } else {
-            console.log("dice2");
             dice2.play();
         }
     }

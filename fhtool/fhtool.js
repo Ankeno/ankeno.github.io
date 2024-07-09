@@ -17,6 +17,9 @@ function clockNum(c) {
 const springNumber = 2.8875;
 
 function calculate() {
+    //click sound
+    let click = new Audio('click.mp3');
+    click.play();
     //from car info
     let carClass = document.querySelector('input[name = "carClass"]:checked').value;
     let carDrive = document.querySelector('input[name = "driveType"]:checked').value;

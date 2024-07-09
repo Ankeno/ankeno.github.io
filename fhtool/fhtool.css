@@ -259,10 +259,10 @@ input[type="number"] {
     background-color: cyan;
 }
 
-.calcBtn:hover {
+.calcBtn:active {
     color: #E6DD8E;
     background-color: #573a1c;
-    transition-duration: 0.5s;
+    transition-duration: 0.1s;
 }
 
 /* 4th row and below - results*/
