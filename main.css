@@ -8,6 +8,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     background-color: rgb(0, 24, 44);
     color: aliceblue;
+    height: 100%;
     /*max-width: 1360px;*/
 }
 
@@ -119,12 +120,17 @@ header {
 }
 
 
-/* drawing area */
+/* main area */
+.mainArea {
+    height: 100vh;
+}
+
 .drawingArea {
+    height: 100%;
+    width: 100%;
     background-image: radial-gradient(circle at 75% 80%, darkblue, lightblue, skyblue);
-    padding: 1px;
+    padding: 0px;
     margin: 0;
-    size: fill;
 }
 
 
