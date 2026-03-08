@@ -128,7 +128,6 @@ header {
 .drawingArea {
     height: 100%;
     width: 100%;
-    background-image: radial-gradient(circle at 75% 80%, darkblue, lightblue, skyblue);
     padding: 0px;
     margin: 0;
 }
