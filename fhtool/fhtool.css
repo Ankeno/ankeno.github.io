@@ -6,7 +6,7 @@ html {
 
 body {
     margin: 0 auto;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-size: 20px;
 }
 
@@ -14,8 +14,8 @@ body {
     margin: 0 auto;
     box-sizing: border-box;
     max-width: 800px;
-    background-color: #412C19;
-    color: #DDD38E;
+    background-color: #412c19;
+    color: #ddd38e;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -24,8 +24,8 @@ body {
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 input[type="number"] {
     appearance: textfield;
@@ -41,7 +41,7 @@ input[type="number"] {
 }
 
 .back {
-    color: #C09050;
+    color: #c09050;
     flex-grow: 2;
     text-align: center;
     text-decoration: none;
@@ -49,12 +49,12 @@ input[type="number"] {
 }
 
 .back:hover {
-    color: #E6DD8E;
+    color: #e6dd8e;
     transition-duration: 1s;
 }
 
 .titleLink {
-    color: #C09050;
+    color: #c09050;
     font-size: 200%;
     text-align: center;
     flex-grow: 6;
@@ -65,7 +65,7 @@ input[type="number"] {
 }
 
 .titleLink:hover {
-    color: #E6DD8E;
+    color: #e6dd8e;
     transition-duration: 1s;
 }
 
@@ -142,7 +142,9 @@ input[type="number"] {
     padding-left: 20px;
 }
 
-.carClass, .driveType, .buildType{
+.carClass,
+.driveType,
+.buildType {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -168,32 +170,32 @@ input[type="number"] {
 
 .radioButton input {
     width: auto;
-	appearance: none;
-	outline: none;
-	cursor: pointer;
-	border-radius: 2px;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 2px;
     padding: 4px 8px;
-	background: #454857;
-	color: #C09050;
-    text-shadow: 
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+    background: #454857;
+    color: #c09050;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 
 .radioButton input:checked {
-    color: #E6DD8E;
+    color: #e6dd8e;
     /*font-weight: bold;*/
     outline-style: solid;
     outline-color: rgb(215, 205, 205);
 }
 
 .radioButton input:before {
-	content: attr(label);
-	display: inline-block;
-	text-align: center;
-	width: 100%;
+    content: attr(label);
+    display: inline-block;
+    text-align: center;
+    width: 100%;
 }
 
 .radioButton input:checked ~ .radioBtn {
@@ -243,9 +245,9 @@ input[type="number"] {
     border-radius: 20px;
     width: 40%;
     height: 90%;
-    color: #C09050;
+    color: #c09050;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-size: 150%;
     font-weight: bold;
     padding-top: 4px;
@@ -256,11 +258,7 @@ input[type="number"] {
 }
 
 .calcBtn:active {
-    background-color: cyan;
-}
-
-.calcBtn:active {
-    color: #E6DD8E;
+    color: #e6dd8e;
     background-color: #573a1c;
     transition-duration: 0.1s;
 }
@@ -286,7 +284,7 @@ input[type="number"] {
     text-align: center;
     margin: 2px;
     font-size: 120%;
-    color: #DDB56D;
+    color: #ddb56d;
     padding-left: 10px;
 }
 
@@ -304,7 +302,7 @@ input[type="number"] {
 }
 
 .result {
-    color: #E8E8E8;
+    color: #e8e8e8;
     font-weight: bold;
 }
 
@@ -330,7 +328,7 @@ input[type="number"] {
     text-align: center;
     margin: 2px;
     font-size: 120%;
-    color: #DDB56D;
+    color: #ddb56d;
     padding-left: 10px;
 }
 
@@ -348,31 +346,56 @@ input[type="number"] {
 }
 
 .extraYellText {
-    color: #E8E8E8;
+    color: #e8e8e8;
     font-weight: bold;
 }
 
 /* line separator, all cells */
-.stats, .calc, .carInfo, .results, .settings, .extra {
+.stats,
+.calc,
+.carInfo,
+.results,
+.settings,
+.extra {
     border-top: 1px solid #302010;
 }
 
 /*screen size*/
 
 @media only screen and (max-width: 760px) {
-    body {font-size: 18px;}
-    .titleLink {font-size: 180%;}
-    .clock {display: none;}
-    .carInfo {grid-template-columns: 1fr 1fr;}
-    .carInfoHeader {grid-column: 1 / span 2;}
+    body {
+        font-size: 18px;
+    }
+    .titleLink {
+        font-size: 180%;
+    }
+    .clock {
+        display: none;
+    }
+    .carInfo {
+        grid-template-columns: 1fr 1fr;
+    }
+    .carInfoHeader {
+        grid-column: 1 / span 2;
+    }
 }
 
 @media only screen and (max-width: 480px) {
-    body {font-size: 16px;}
-    .titleLink {font-size: 150%;}
-    .clock {display: none;}
-    .carInfo {grid-template-columns: 1fr;}
-    .carInfoHeader {grid-column: 1;}
+    body {
+        font-size: 16px;
+    }
+    .titleLink {
+        font-size: 150%;
+    }
+    .clock {
+        display: none;
+    }
+    .carInfo {
+        grid-template-columns: 1fr;
+    }
+    .carInfoHeader {
+        grid-column: 1;
+    }
 }
 /*
 @media only screen and (max-width: 321px) {

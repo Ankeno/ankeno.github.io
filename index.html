@@ -1,54 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ankeno</title>
+        <link rel="stylesheet" href="topbar.css" />
+        <link rel="stylesheet" href="main.css" />
+        <script src="topbar.js" defer></script>
+        <script src="main.js" defer></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ankeno</title>
-    <link rel="stylesheet" href="main.css">
-    <script src="main.js" defer></script>
-</head>
-
-<body onload="clock()">
-    <!--navbar-->
-    <div class="navBar" id="navBar">
-        <div class="logo" id="logo">Ankeno</div>
-        <a href="index.html" class="active">Home</a>
-        <a href="dice/dice.html">Dice Roller</a>
-        <a href="fhtool/fhtool.html">FH Tool</a>
-        <a href="#">About</a>
-        <div class="clock" id="clock"></div>
-        <div class="icon" id="icon" onclick="nav(); navBtn()">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+    <body onload="clock()">
+        <!--topbar-->
+        <div class="navBar" id="navBar">
+            <div class="logo" id="logo">Ankeno</div>
+            <a href="index.html" class="active">Home</a>
+            <a href="dice/dice.html">Dice Roller</a>
+            <a href="fhtool/fhtool.html">FH Tool</a>
+            <a href="timer/timer.html">Timer</a>
+            <div class="clock" id="clock"></div>
+            <div
+                class="icon"
+                id="icon"
+                onclick="
+                    nav();
+                    navBtn();
+                "
+            >
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </div>
-    </div>
 
-    <!--header-->
-    <header>
-        <div>
-            <h1>github.io</h1>
-            <!--<h1><a href="https://github.com/Ankeno/ankeno.github.io">GitHub</a></h1>-->
-            <p>.</p>
+        <!--header-->
+        <header>
+            <div>
+                <h1>github.io</h1>
+                <!--<h1><a href="https://github.com/Ankeno/ankeno.github.io">GitHub</a></h1>-->
+                <p>.</p>
+            </div>
+        </header>
+
+        <!--main-->
+        <div class="mainArea">
+            <div>
+                <h1>ankeno.github.io</h1>
+                <h1>
+                    <a href="https://github.com/Ankeno/ankeno.github.io"
+                        >GitHub</a
+                    >
+                </h1>
+                <p>.</p>
+            </div>
+            <section class="drawingArea" id="drawingArea">
+                <p>text</p>
+                <h2>image area</h2>
+                <p><img src="images/g2.svg" alt="" /></p>
+                <p><img src="images/g2.svg" alt="" width="50" height="50" /></p>
+                <p>
+                    <img src="images/g2.svg" alt="" width="200" height="200" />
+                </p>
+            </section>
         </div>
-    </header>
-
-    <!--main-->
-    <div class="mainArea">
-        <div>
-            <h1>ankeno.github.io</h1>
-            <h1><a href="https://github.com/Ankeno/ankeno.github.io">GitHub</a></h1>
-            <p>.</p>
-        </div>
-        <section class="drawingArea" id="drawingArea">
-            <h2>image area</h2>
-            <p><img src="images/g2.svg" alt=""></p>
-            <p><img src="images/g2.svg" alt="" width="50" height="50"></p>
-            <p><img src="images/g2.svg" alt="" width="200" height="200"></p>
-        </section>
-    </div>
-
-</body>
-
+    </body>
 </html>

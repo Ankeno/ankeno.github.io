@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Timer</title>
+        <link rel="stylesheet" href="../topbar.css" />
+        <script src="../topbar.js" defer></script>
+        <style>
+            html {
+                background-image: url("../images/bg.png");
+                height: 100%;
+            }
+
+            body {
+                margin: 0 auto;
+                font-family: "Courier New", Courier, monospace;
+                background-color: rgb(0, 24, 44);
+                color: aliceblue;
+                height: 100%;
+                /*max-width: 1360px;*/
+            }
+
+            /* header */
+            header {
+                padding: 10px;
+                background-color: rgb(0, 29, 73);
+            }
+
+            /* main area */
+            .mainArea {
+                height: 100vh;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            /* start button */
+            .startButton {
+                background-color: #302010;
+                border: 4px solid black;
+                border-radius: 20px;
+                width: 40%;
+                height: 90%;
+                color: #c09050;
+                text-align: center;
+                font-family: "Courier New", Courier, monospace;
+                font-size: 150%;
+                font-weight: bold;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                cursor: pointer;
+                outline: none;
+                transition-duration: 0.5s;
+            }
+            .startButton:active {
+                color: #e6dd8e;
+                background-color: #573a1c;
+                transition-duration: 0.1s;
+            }
+            /* image area */
+            .imgArea {
+                width: 200px;
+                height: 200px;
+                border: 5px solid saddlebrown;
+                padding: 5px;
+                background-color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .imgAreaInside {
+                width: 70%;
+                height: auto;
+            }
+        </style>
+    </head>
+
+    <body onload="clock()">
+        <!--topbar-->
+        <div class="navBar" id="navBar">
+            <div class="logo" id="logo">Ankeno</div>
+            <a href="../index.html">Home</a>
+            <a href="../dice/dice.html">Dice Roller</a>
+            <a href="../fhtool/fhtool.html">FH Tool</a>
+            <a href="timer/timer.html" class="active">Timer</a>
+            <div class="clock" id="clock"></div>
+            <div
+                class="icon"
+                id="icon"
+                onclick="
+                    nav();
+                    navBtn();
+                "
+            >
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+
+        <!--header-->
+        <header>
+            <div>
+                <h1>Timer</h1>
+                <!--<h1><a href="https://github.com/Ankeno/ankeno.github.io">GitHub</a></h1>-->
+            </div>
+        </header>
+
+        <!--main-->
+        <div class="mainArea">
+            <p>Start/Stop</p>
+            <div id="startStopBox">
+                <button class="startButton" id="startButton" onclick="">
+                    Start/Stop
+                </button>
+            </div>
+
+            <div>
+                <label>Interval (s):</label>
+                <input
+                    type="number"
+                    id="interval"
+                    min="1"
+                    max="9000"
+                    value="5.5"
+                    maxlength="4"
+                    step="0.5"
+                />
+            </div>
+            <div id="imgArea" class="imgArea">
+                <img
+                    src="../images/g2.svg"
+                    id="imgAreaInside"
+                    class="imgAreaInside"
+                />
+            </div>
+        </div>
+        <script></script>
+    </body>
+</html>
