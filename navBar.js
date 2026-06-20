@@ -1,4 +1,4 @@
-// topbar
+// navBar
 function nav() {
   let x = document.getElementById("navBar");
   if (x.className === "navBar") {
