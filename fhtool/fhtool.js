@@ -18,7 +18,7 @@ const springNumber = 2.8875;
 
 function calculate() {
     //click sound
-    let click = new Audio('click.mp3');
+    let click = new Audio('../audio/click.mp3');
     click.play();
     //from car info
     let carClass = document.querySelector('input[name = "carClass"]:checked').value;
@@ -38,7 +38,7 @@ function calculate() {
 
     let arbFront = arbMin+(arbConst*carFront/100);
     document.getElementById('arbFront').innerHTML = Math.round(arbFront*10)/10;
-    
+
     let arbRear = arbMax-(arbConst*carFront/100);
     document.getElementById('arbRear').innerHTML = Math.round(arbRear*10)/10;
 
@@ -50,22 +50,22 @@ function calculate() {
     let frontSpring = carFront/100*springNumber/avgHeight*carWeight;
 
     if (carBuild == "Road") {
-        document.getElementById('frontSpring').innerHTML = Math.round(frontSpring*10)/10;    
+        document.getElementById('frontSpring').innerHTML = Math.round(frontSpring*10)/10;
     }
     else {
         document.getElementById('frontSpring').innerHTML = "soft";
     }
-    
+
     let rearSpring = (100-carFront)/100*springNumber/avgHeight*carWeight;
     if (carBuild == "Road"){
-        document.getElementById('rearSpring').innerHTML = Math.round(rearSpring*10)/10;    
+        document.getElementById('rearSpring').innerHTML = Math.round(rearSpring*10)/10;
     }
     else {
         document.getElementById('rearSpring').innerHTML = "soft";
     }
 
     //damping
-	
+
     let reboundCalc;
     switch(carBuild) {
         case "Road":
@@ -127,7 +127,7 @@ function calculate() {
             document.getElementById('frontDcc').innerHTML = "x";
             if(carBuild == "Road") {
                 document.getElementById('rearAcc').innerHTML = "30-75";
-                document.getElementById('rearDcc').innerHTML = "0-20";    
+                document.getElementById('rearDcc').innerHTML = "0-20";
             }
             else {
                 document.getElementById('rearAcc').innerHTML = "70-100";

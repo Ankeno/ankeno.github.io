@@ -7,58 +7,72 @@
     background-image: linear-gradient(black, rgb(0, 34, 49), black);
 }
 
-.navBar .logo {
+.logo {
     font-size: 1.2em;
     font-weight: bold;
-    padding: 0 0.5em 0 0.5em;
+    padding: 0 0.1em 0 0.1em;
     color: yellow;
     text-decoration: none;
     text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto 0.1em auto 0.1em;
 }
 
 .navBar a {
     font-size: 1.1em;
     color: aliceblue;
     text-align: center;
-    padding: 0.5em 0.5em;
+    text-shadow: 0 0 0.3em black;
+    margin: 0.3em;
+    padding: 0.2em 0.5em;
     text-decoration: none;
+    corner-shape: bevel;
+    border: 1px solid grey;
+    border-radius: 0.4em;
+    background-image: linear-gradient(steelblue, black, steelblue);
 }
 
 .navBar a:hover {
-    background-color: darkcyan;
-    border-radius: 0.8em;
-    color: aliceblue;
+    background-image: linear-gradient(mediumpurple, black, mediumpurple);
+    border-radius: 0.4em;
+    color: white;
+    border: 1px solid orchid;
 }
 
 .navBar a.active {
-    background-color: rgb(27, 70, 119);
-    border-radius: 0.8em;
-    color: aliceblue;
+    border-radius: 0.4em;
+    color: white;
+    border: 1px solid lightseagreen;
+    background-image: linear-gradient(darkcyan, black, darkcyan);
 }
 
-.navBar .clock {
+.clock {
+    display: block;
     font-size: 1.2em;
     color: aliceblue;
     text-align: center;
-    padding: 0 0.5em 0 0;
+    padding: 0.1em 0.2em;
+    margin: auto 0.1em auto auto;
     text-decoration: none;
     transition: 0.5s;
     font-weight: bold;
-    margin-left: auto;
-    margin-top: auto;
-    margin-bottom: auto;
+    corner-shape: scoop;
+    border: 1px solid grey;
+    border-radius: 0.3em;
+    background-image: linear-gradient(midnightblue, black, midnightblue);
 }
 
-.navBar .clock:hover {
+.clock:hover {
     color: yellow;
 }
 
-.navBar .icon {
+.switch.clock {
+    display: none;
+}
+
+.icon {
     display: none;
     cursor: pointer;
-    margin: 6px;
+    margin: 3px;
     margin-left: auto;
     border-radius: 6px;
     background-color: black;
@@ -67,7 +81,8 @@
 .bar1 {
     width: 27px;
     height: 3px;
-    background-color: rgb(255, 0, 0);
+    /*background-color: rgb(255, 0, 0);*/
+    background-color: orangered;
     margin: 6px 3px 6px 3px;
     transition: 0.5s;
     border-radius: 2px;
@@ -75,7 +90,8 @@
 .bar2 {
     width: 27px;
     height: 3px;
-    background-color: rgb(0, 255, 0);
+    /*background-color: rgb(0, 255, 0);*/
+    background-color: springgreen;
     margin: 0px 3px 6px 3px;
     transition: 0.5s;
     border-radius: 2px;
@@ -83,7 +99,8 @@
 .bar3 {
     width: 27px;
     height: 3px;
-    background-color: rgb(0, 0, 255);
+    /*background-color: rgb(0, 0, 255);*/
+    background-color: royalblue;
     margin: 0px 3px 6px 3px;
     transition: 0.5s;
     border-radius: 2px;
@@ -100,16 +117,12 @@
 }
 
 @media screen and (max-width: 600px) {
-    /*.navBar a:not(:first-child) {display: none;}*/
     .navBar a {
         display: none;
     }
     .navBar .icon {
         float: right;
         display: block;
-    }
-    .navBar .clock {
-        display: none;
     }
 }
 
@@ -124,7 +137,7 @@
         top: 0;
     }
     .navBar.responsive a {
-        width: 40%;
+        width: 35%;
         display: initial;
     }
     .navBar.responsive .logo {

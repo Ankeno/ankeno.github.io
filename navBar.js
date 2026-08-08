@@ -17,6 +17,15 @@ function navBtn() {
   }
 }
 
+function navClock() {
+  let x = document.getElementById("clock");
+  if (x.className === "clock") {
+    x.className += " switch";
+  } else {
+    x.className = "clock";
+  }
+}
+
 // clock
 function clock() {
   var day = new Date();
